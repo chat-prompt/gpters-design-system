@@ -337,7 +337,11 @@
 
 <section id="gallery">
   <h2>참고 자료</h2>
-  <p class="desc"><span class="tag gray">검토 중</span>방향을 잡으려고 모아 둔 이미지예요. 확정된 기준작이 아니에요.</p>
+  <p class="desc"><span class="tag gray">검토 중</span>지인 팀장이 직접 만든 작업들이에요. 방향을 잡는 참고 자료이고, 확정된 기준작은 아니에요.</p>
+  <h3>판매 카드뉴스 (사진형 · 하단 주황 띠 CTA · 1:1·4:5·9:16 세트)</h3>
+  <div class="grid g3" id="g-cards"></div>
+  <h3>캐릭터 장면 배너</h3>
+  <div class="grid g3" id="g-scenes"></div>
   <h3>판매·이벤트 배너 (24기)</h3>
   <div class="grid g3" id="g-sales"></div>
   <h3>스터디 배너 (캐릭터 장면)</h3>
@@ -360,6 +364,9 @@
     b.innerHTML=`<i style="background:${h}"></i><div><b>${n}</b><small>${h}</small><em>${u}</em></div>`;
     b.onclick=async()=>{try{await navigator.clipboard.writeText(h)}catch(e){}toast.textContent=h+' 복사했어요';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1200)};sw.appendChild(b)});
   const gal=(id,list)=>{const el=document.getElementById(id);list.forEach(([f,c])=>{el.insertAdjacentHTML('beforeend',`<figure><img src="assets/refs/${f}" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`)})};
+  const galw=(id,list)=>{const el=document.getElementById(id);list.forEach(([f,c])=>{el.insertAdjacentHTML('beforeend',`<figure><img src="assets/works/${f}" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`)})};
+  galw('g-cards',[['09_image_offmeet_v7_4x5.jpg','10명 중 8명이 재신청하는 스터디'],['10_image_podium_v3_4x5.jpg','포기할 수 없게 끌고 갑니다(발표)'],['11_image_speaker_v3_4x5.jpg','포기할 수 없게 끌고 갑니다(강연)']]);
+  galw('g-scenes',[['og-4cats.jpg','지피터스 AI 스터디 24기 OG'],['study-info-session-live.jpg','오늘 밤 9시 스터디 설명회 라이브'],['youtube-channel-art.jpg','유튜브 채널아트']]);
   gal('g-sales',[['sales-blind-hero.jpg','블라인드 할인 오늘 마감'],['sales-super-open.jpg','슈퍼얼리버드 OPEN'],['sales-super-d2.jpg','슈퍼얼리버드 D-2'],['sales-blind-wide.jpg','눈 가리고 질러도 되는 날'],['sales-super-last-day.jpg','4주 동안 AI 마스터하기'],['sales-early-wide.jpg','4주 동안 AI 마스터하기(가로)'],['sales-grit-racing.jpg','4주 동안 절대 포기 못하게 끌고 갑니다 (1080×650)'],['sales-early-last-card.jpg','올해 마지막입니다']]);
   gal('g-study',[['study-hero.jpg','메인'],['study-unicorn-sprint.jpg','서비스 성장'],['study-kkulim-studio.jpg','영상 제작'],['study-voice-agent.jpg','음성 AI 비서'],['study-godot-game.jpg','게임 개발'],['study-owner-time.jpg','사업장 자동화']]);
   // 배너 키트 데모: 컨테이너 폭에 맞춰 --W/--H 재계산(2:1)
