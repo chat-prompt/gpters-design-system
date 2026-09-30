@@ -1,0 +1,28 @@
+/* GPTers 배너 부품(컴포넌트) v1 — 2026-09-30, 지인 제작 뉴스레터 배너 2장을 재서 만듦
+   모든 크기는 배너 높이 --H 기준 비율. 사용: <div class="gb" style="--H:650px;--W:1080px"> ... </div>
+   폰트는 이 맥에 설치된 Paperlogy / SUIT (install-fonts.sh). 외곽선은 요청 시에만 .gb-stroke 추가. */
+.gb{position:relative;width:var(--W);height:var(--H);overflow:hidden;font-family:'SUIT',sans-serif;color:#1A1A1A}
+.gb--dark{color:#FFFFFF}
+.gb-art{position:absolute;inset:0;background-size:cover;background-position:center}
+/* 글자 덩어리: 왼쪽 5%W, 위 17%H에서 시작, 폭 최대 50%W */
+.gb-text{position:absolute;left:calc(var(--W)*0.05);top:calc(var(--H)*0.17);max-width:calc(var(--W)*0.50)}
+/* 라벨: 글자형(밝은 배너) / 칩형(어두운 배너) */
+.gb-label{font-family:'SUIT';font-weight:700;font-size:calc(var(--H)*0.062);line-height:1;letter-spacing:-0.02em;margin-bottom:calc(var(--H)*0.038)}
+.gb-label--chip{display:inline-block;background:#FFFFFF;color:#1A1A1A;padding:calc(var(--H)*0.016) calc(var(--H)*0.026);border-radius:calc(var(--H)*0.008);font-size:calc(var(--H)*0.048)}
+/* 헤드카피: 페이퍼로지 Black, 뜻 단위 두 줄, 줄 간격 붙임 */
+.gb-head{font-family:'Paperlogy';font-weight:900;font-size:calc(var(--H)*0.17);line-height:1.08;letter-spacing:-0.02em;white-space:nowrap}
+.gb-head--m{font-size:calc(var(--H)*0.145)}   /* 문구가 길 때(어두운 배너 크기) */
+.gb-accent{color:#EB5A10}
+.gb--dark .gb-accent{color:#FF7A1A}
+/* 서브카피: SUIT 500~600, 두 줄 */
+.gb-sub{font-family:'SUIT';font-weight:600;font-size:calc(var(--H)*0.057);line-height:1.25;letter-spacing:-0.02em;margin-top:calc(var(--H)*0.035)}
+/* CTA 버튼(판매 배너): 노랑→주황 알약 + 화살표 */
+.gb-cta{display:inline-flex;align-items:center;gap:.4em;margin-top:calc(var(--H)*0.05);padding:calc(var(--H)*0.028) calc(var(--H)*0.06);border-radius:999px;
+  font-family:'Paperlogy';font-weight:800;font-size:calc(var(--H)*0.06);color:#1A1A1A;background:linear-gradient(180deg,#FFD84A,#FFB21A);box-shadow:0 calc(var(--H)*0.01) 0 #E07A00}
+/* 날짜 리본 배지(판매 배너): 파란 티켓 */
+.gb-badge{display:inline-block;padding:calc(var(--H)*0.012) calc(var(--H)*0.03);font-family:'Paperlogy';font-weight:900;font-size:calc(var(--H)*0.07);
+  color:#fff;background:linear-gradient(180deg,#2F6BFF,#1238C9);transform:rotate(-6deg);clip-path:polygon(4% 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%)}
+/* 외곽선: 요청 시에만 */
+.gb-stroke{-webkit-text-stroke:calc(var(--H)*0.006) #FFFFFF;paint-order:stroke fill}
+/* 로고: 넣기로 했을 때만, 우하단 55% */
+.gb-logo{position:absolute;right:calc(var(--W)*0.056);bottom:calc(var(--W)*0.056);width:calc(var(--W)*0.11);opacity:.55}
