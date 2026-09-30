@@ -361,7 +361,7 @@
     b.innerHTML=`<i style="background:${h}"></i><div><b>${n}</b><small>${h}</small><em>${u}</em></div>`;
     b.onclick=async()=>{try{await navigator.clipboard.writeText(h)}catch(e){}toast.textContent=h+' 복사했어요';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1200)};sw.appendChild(b)});
   const gal=(id,list)=>{const el=document.getElementById(id);list.forEach(([f,c])=>{el.insertAdjacentHTML('beforeend',`<figure><img src="assets/refs/${f}" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`)})};
-  gal('g-sales',[['sales-blind-hero.jpg','블라인드 할인 오늘 마감'],['sales-super-open.jpg','슈퍼얼리버드 OPEN'],['sales-super-d2.jpg','슈퍼얼리버드 D-2'],['sales-blind-wide.jpg','눈 가리고 질러도 되는 날'],['sales-super-last-day.jpg','4주 동안 AI 마스터하기'],['sales-early-wide.jpg','4주 동안 AI 마스터하기(가로)'],['sales-grit-card.jpg','절대 포기 못하게 끌고 갑니다'],['sales-early-last-card.jpg','올해 마지막입니다']]);
+  gal('g-sales',[['sales-blind-hero.jpg','블라인드 할인 오늘 마감'],['sales-super-open.jpg','슈퍼얼리버드 OPEN'],['sales-super-d2.jpg','슈퍼얼리버드 D-2'],['sales-blind-wide.jpg','눈 가리고 질러도 되는 날'],['sales-super-last-day.jpg','4주 동안 AI 마스터하기'],['sales-early-wide.jpg','4주 동안 AI 마스터하기(가로)'],['sales-grit-racing.jpg','4주 동안 절대 포기 못하게 끌고 갑니다 (1080×650)'],['sales-early-last-card.jpg','올해 마지막입니다']]);
   gal('g-study',[['study-hero.jpg','메인'],['study-unicorn-sprint.jpg','서비스 성장'],['study-kkulim-studio.jpg','영상 제작'],['study-voice-agent.jpg','음성 AI 비서'],['study-godot-game.jpg','게임 개발'],['study-owner-time.jpg','사업장 자동화']]);
   // 배너 키트 데모: 컨테이너 폭에 맞춰 --W/--H 재계산(2:1)
   const demo=document.querySelector('#demo .gb');
