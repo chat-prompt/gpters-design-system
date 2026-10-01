@@ -47,7 +47,8 @@
   h1 em{font-style:normal;color:var(--orange)}
   h2{font-family:'Paperlogy';font-weight:800;font-size:32px;letter-spacing:-0.02em;line-height:1.2;margin-bottom:10px}
   h3{font-family:'SUIT';font-weight:700;font-size:19px;margin:28px 0 10px}
-  .lead{font-size:17px;color:#444;max-width:720px}
+  .lead{font-size:18px;line-height:1.65;color:#3a3a3a;max-width:640px}
+  body,p,h1,h2,h3,li,td{word-break:keep-all;overflow-wrap:break-word}
   .desc{color:var(--muted);max-width:760px;margin-bottom:20px}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
   .grid{display:grid;gap:16px}
@@ -66,6 +67,23 @@
   .hero::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");pointer-events:none}
   .hero .lead{margin-top:18px}
   .hero-meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
+  .hero-intro{margin-top:22px;display:grid;gap:10px;max-width:640px}
+  .hero-intro p{font-size:18px;line-height:1.65;color:#3a3a3a}
+  .hero-intro b{color:var(--ink)}
+  .ai-card{margin-top:28px;position:relative;z-index:1;border-radius:20px;padding:28px 30px;background:var(--dark);color:#fff;overflow:hidden}
+  .ai-card::before{content:"";position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,#EB5A10 0%,rgba(235,90,16,0) 70%);opacity:.55}
+  .ai-card .pill{display:inline-block;font-family:'Clash Grotesk',sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;padding:4px 10px;border-radius:999px;background:#EB5A10;color:#fff}
+  .ai-card h3{position:relative;margin:12px 0 8px;font-family:'Paperlogy';font-weight:900;font-size:clamp(26px,3.2vw,34px);line-height:1.2;letter-spacing:-0.02em}
+  .ai-card h3 em{font-style:normal;color:#FF8A3D}
+  .ai-card p{position:relative;font-size:16px;line-height:1.6;color:#D9D4CF;max-width:560px}
+  .ai-actions{position:relative;margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+  .ai-actions a,.ai-actions button{font:inherit;font-size:15px;font-weight:700;padding:12px 18px;border-radius:10px;cursor:pointer;text-decoration:none;border:1.5px solid transparent;display:inline-flex;align-items:center;gap:8px}
+  .ai-actions .primary{background:#EB5A10;color:#fff}
+  .ai-actions .primary:hover{background:#D34600}
+  .ai-actions .ghost{background:transparent;color:#fff;border-color:#4a4643}
+  .ai-actions .ghost:hover{border-color:#fff}
+  @media (max-width:640px){.ai-card{padding:22px 18px}.ai-actions a,.ai-actions button{width:100%;justify-content:center}}
+
   .kw{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
   .kw span{font-family:'Paperlogy';font-weight:800;font-size:18px;padding:10px 16px;border-radius:999px;background:var(--panel);border:1px solid var(--line)}
   .kw span:nth-child(3n+1){background:var(--dark);color:#fff;border-color:var(--dark)}
@@ -153,15 +171,22 @@
 
 <section id="overview">
   <div class="hero">
-    <div class="eyebrow">GPTers Design System · 초안 · 2026.09.30</div>
+    <div class="eyebrow">GPTers Design System · 초안 · 2026.10.01</div>
     <h1>한 장을 봐도<br><em>지피터스</em>답게</h1>
-    <p class="lead"><b>지피터스</b>는 직장인·비개발자가 AI를 함께 배우고 실제 일에 쓰는 AI 커뮤니티예요. 4주 AI 스터디, 사례글, 뉴스레터로 회원 약 5만 5천 명이 함께해요.</p>
-    <p class="lead" style="margin-top:10px"><b>왜 만들었나</b> · 배너 한 장, 화면 하나를 만들 때마다 새로 정하지 않고, 누가 만들어도 지피터스답게 나오도록 기준을 한곳에 모았어요.</p>
-    <div class="card" style="margin-top:18px;border:2px solid #EB5A10;background:linear-gradient(135deg,#FFF4EC,#FFE4D3)">
-      <b style="font-family:'Paperlogy';font-weight:900;font-size:22px;color:#1C1917">🤖 + 🙋 <span style="color:#EB5A10">AI와 사람이 같이 봐요</span></b>
-      <p class="desc" style="margin:6px 0 0">지피터스답게, 이 디자인 시스템은 사람 디자이너와 AI 에이전트가 같은 페이지를 읽고 같은 기준으로 만들어요. 그래서 수치는 눈대중 대신 재서 적고, 규칙은 AI도 그대로 따라 할 수 있게 문장으로 써요.</p>
+    <div class="hero-intro">
+      <p><b>지피터스</b>는 직장인·비개발자가 AI를 함께 배우고 실제 일에 쓰는 AI 커뮤니티예요.</p>
+      <p>배너 한 장, 화면 하나도 누가 만들든 지피터스답게 나오도록 기준을 한곳에 모았어요.</p>
     </div>
-    <div class="hero-meta"><span class="tag">원칙</span><span class="tag">파운데이션</span><span class="tag">컴포넌트</span><span class="tag">패턴</span><span class="tag">갤러리</span></div>
+    <div class="ai-card">
+      <span class="pill">AI × HUMAN</span>
+      <h3>AI와 사람이 <em>같이 보는</em><br>디자인 시스템</h3>
+      <p>사람은 이 페이지를, 내 AI는 DESIGN.md를 읽어요. 기준이 같으니 누가 만들어도 결과가 같아요.</p>
+      <div class="ai-actions">
+        <button class="primary" type="button" data-copy="https://gpters-design.vercel.app/DESIGN.md 를 읽고, 이 지피터스 디자인 시스템 기준으로 만들어 줘.">내 AI에게 줄 문장 복사</button>
+        <a class="ghost" hidden href="https://github.com/chat-prompt/gpters-design-system" target="_blank" rel="noopener">GitHub에서 보기</a>
+        <a class="ghost" href="DESIGN.md" target="_blank" rel="noopener">DESIGN.md 열기</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -369,6 +394,7 @@
     ['Ink','#1A1A1A','제목·본문'],['Dark','#151413','어두운 배너·영상 배경'],
     ['Muted','#6B6B6B','캡션·출처'],['Surface','#F6F6F6','중립 면']];
   const sw=document.getElementById('swatches'), toast=document.getElementById('toast');
+  document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy)}catch(e){}toast.textContent='복사했어요. 내 AI에게 붙여 넣으세요';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}));
   colors.forEach(([n,h,u])=>{const b=document.createElement('button');b.className='sw';b.type='button';
     b.innerHTML=`<i style="background:${h}"></i><div><b>${n}</b><small>${h}</small><em>${u}</em></div>`;
     b.onclick=async()=>{try{await navigator.clipboard.writeText(h)}catch(e){}toast.textContent=h+' 복사했어요';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1200)};sw.appendChild(b)});

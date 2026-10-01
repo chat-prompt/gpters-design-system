@@ -1,0 +1,4 @@
+GPTers 디자인 시스템
+
+- 사람용: https://gpters-design.vercel.app
+- AI용 정본: https://gpters-design.vercel.app/DESIGN.md
