@@ -67,6 +67,9 @@
   .hero::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");pointer-events:none}
   .hero .lead{margin-top:18px}
   .hero-meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+  .hero-grid .ai-card{margin-top:0;width:auto;max-width:none}
+  @media (max-width:1100px){.hero-grid{grid-template-columns:1fr;gap:22px}}
   .hero-intro{margin-top:16px;display:grid;gap:6px;max-width:640px}
   .hero-intro p{font-size:17px;line-height:1.65;color:#3a3a3a}
   .hero-intro b{color:var(--ink)}
@@ -171,11 +174,14 @@
 
 <section id="overview">
   <div class="hero">
+    <div class="hero-grid">
+    <div class="hero-left">
     <div class="eyebrow">GPTers Design System · 초안 · 2026.10.01</div>
     <h1>한 장을 봐도<br><em>지피터스</em>답게</h1>
     <div class="hero-intro">
       <p><b>지피터스</b>는 직장인·비개발자가 AI를 함께 배우고 실제 일에 쓰는 AI 커뮤니티예요.</p>
       <p>배너 한 장, 화면 하나도 누가 만들든 지피터스답게 나오도록 기준을 한곳에 모았어요.</p>
+    </div>
     </div>
     <div class="ai-card">
       <span class="pill">🤖 AI × HUMAN 🙋</span>
@@ -186,6 +192,7 @@
         <a class="ghost" href="https://github.com/chat-prompt/gpters-design-system" target="_blank" rel="noopener">🐙 GitHub에서 보기</a>
         <a class="ghost" href="DESIGN.md" target="_blank" rel="noopener">📄 DESIGN.md 열기</a>
       </div>
+    </div>
     </div>
   </div>
 </section>
