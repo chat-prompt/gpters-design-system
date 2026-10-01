@@ -314,8 +314,17 @@
       <div class="gb-art" style="background-image:url(assets/kit/art-example.jpg);background-position:right center"></div>
       <div class="gb-text">
         <div class="gb-label">지피터스 뉴스레터</div>
-        <div class="gb-head">이번 주 <span class="gb-accent">AI</span>,<br>이렇게 쓰기!</div>
+        <div class="gb-head gb-head--m">이번 주 <span class="gb-accent">AI</span>,<br>이렇게 쓰기!</div>
         <div class="gb-sub">새로운 소식과 직접 써본 활용법을<br>매주 월요일 보내드려요</div>
+      </div>
+    </div>
+  </div></div>
+  <p class="desc" style="margin-top:14px"><b>글자가 적을 때(헤드카피만)</b> · 타이틀을 좌상단 <code>.gb-text--top</code>에 붙이고, 그림이 나머지를 채워요. 왼쪽을 단색 판으로 비우지 않아요.</p>
+  <div class="stage" style="position:relative"><span class="tag gray" style="position:absolute;left:14px;top:12px;z-index:2">예시 · 헤드카피만</span><div class="demo-wrap">
+    <div class="gb" style="--W:700px;--H:350px">
+      <div class="gb-art" style="background-image:url(assets/kit/art-example.jpg);background-position:right center"></div>
+      <div class="gb-text gb-text--top">
+        <div class="gb-head">이번 주 <span class="gb-accent">AI</span>,<br>이렇게!</div>
       </div>
     </div>
   </div></div>
@@ -323,13 +332,15 @@
     <tr><th>부품</th><th>클래스</th><th>규격(배너 높이 H 기준)</th></tr>
     <tr><td>틀</td><td><code>.gb</code> <code>--W</code> <code>--H</code></td><td>어두운 배너 <code>.gb--dark</code></td></tr>
     <tr><td>글자 덩어리</td><td><code>.gb-text</code></td><td>왼쪽 5%W · 위 17%H · 최대 폭 50%W</td></tr>
+    <tr><td>헤드카피만일 때</td><td><code>.gb-text--top</code></td><td>좌상단 · 위 9%H, 그림이 나머지를 채움</td></tr>
+    <tr><td>글자 뒤 대비</td><td><code>.gb-scrim</code> <code>.gb-scrim--light</code></td><td>그림 위 왼쪽에서 오른쪽으로 옅어지는 그라데이션</td></tr>
     <tr><td>라벨</td><td><code>.gb-label</code></td><td>SUIT 700 · 6.2%H</td></tr>
     <tr><td>헤드카피</td><td><code>.gb-head</code> + <code>.gb-accent</code></td><td>Paperlogy 900 · 17%H · 줄 간격 1.08 · 두 줄</td></tr>
     <tr><td>서브카피</td><td><code>.gb-sub</code></td><td>SUIT 600 · 5.7%H · 줄 간격 1.25</td></tr>
   </table></div>
   <div class="grid g2" style="margin-top:16px">
-    <div class="do"><b>DO</b><ul><li>그림의 왼쪽 절반은 비워 두고 캐릭터는 오른쪽 절반에</li><li>최종 규격 비율 그대로 그림을 만들기</li><li>렌더 뒤 글자가 그림에 닿지 않는지 눈으로 확인</li></ul></div>
-    <div class="dont"><b>DON'T</b><ul><li>다른 비율 그림을 잘라서 캐릭터를 글자 쪽으로 밀기</li><li>글자를 줄여서 억지로 끼우기</li><li>한 단어만 한 줄에 남기는 줄바꿈</li></ul></div>
+    <div class="do"><b>DO</b><ul><li>그림은 캔버스 전체에 장면째 깔고, 캐릭터는 오른쪽에 크게. 글자 쪽도 같은 배경이 이어지게(단색 판으로 자르지 않기)</li><li>최종 규격 비율 그대로 그림을 만들기</li><li>렌더 뒤 글자가 그림에 닿지 않는지 눈으로 확인</li><li>글자가 적으면(헤드카피만) 타이틀을 좌상단 <code>.gb-text--top</code>에 붙이고 그림이 나머지를 채우게</li><li>글자가 배경에 묻히면 <code>.gb-scrim</code>(그라데이션)으로 대비 맞추기</li></ul></div>
+    <div class="dont"><b>DON'T</b><ul><li>다른 비율 그림을 잘라서 캐릭터를 글자 쪽으로 밀기</li><li>글자를 줄여서 억지로 끼우기</li><li>한 단어만 한 줄에 남기는 줄바꿈</li><li>왼쪽을 단색 판으로 비워 두고 그림을 오른쪽 절반에만 넣기(빈 배너가 돼요)</li></ul></div>
   </div>
 </section>
 

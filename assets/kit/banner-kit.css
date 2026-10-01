@@ -19,3 +19,9 @@
 .gb-stroke{-webkit-text-stroke:calc(var(--H)*0.006) #FFFFFF;paint-order:stroke fill}
 /* 로고: 넣기로 했을 때만, 우하단 55% */
 .gb-logo{position:absolute;right:calc(var(--W)*0.056);bottom:calc(var(--W)*0.056);width:calc(var(--W)*0.11);opacity:.55}
+/* 10/1 지인: "텍스트가 적을 때는 타이틀을 좌상단에, 나머지는 그림이 채우게", "왼쪽이 너무 비어 보인다"
+   그림(.gb-art)은 늘 캔버스 전체에 장면째 깐다. 글자 쪽을 단색 판으로 자르지 않는다.
+   글자 대비는 그림 위에 .gb-scrim(그라데이션)을 얹어 맞춘다. */
+.gb-text--top{top:calc(var(--H)*0.09)}            /* 헤드카피만 있을 때: 좌상단 */
+.gb-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(21,20,19,.72) 0%,rgba(21,20,19,.38) 34%,rgba(21,20,19,0) 56%)}
+.gb-scrim--light{background:linear-gradient(100deg,rgba(250,248,246,.86) 0%,rgba(250,248,246,.45) 34%,rgba(250,248,246,0) 56%)}
