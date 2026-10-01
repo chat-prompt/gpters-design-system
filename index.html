@@ -319,7 +319,7 @@
       </div>
     </div>
   </div></div>
-  <p class="desc" style="margin-top:14px"><b>글자가 적을 때(헤드카피만)</b> · 타이틀을 좌상단 <code>.gb-text--top</code>에 붙이고, 그림이 나머지를 채워요. 왼쪽을 단색 판으로 비우지 않아요.</p>
+  <p class="desc" style="margin-top:14px"><b>글자가 적을 때(헤드카피만) 허용하는 자리 셋</b> · 좌상단 <code>.gb-text--top</code> / 상단 중앙 한 줄 <code>.gb-text--top-center</code> / 하단 중앙 한 줄 <code>.gb-text--bottom-center</code>. 어느 쪽이든 그림이 캔버스 전체를 채우고, 왼쪽을 단색 판으로 비우지 않아요.</p>
   <div class="stage" style="position:relative"><span class="tag gray" style="position:absolute;left:14px;top:12px;z-index:2">예시 · 헤드카피만</span><div class="demo-wrap">
     <div class="gb" style="--W:700px;--H:350px">
       <div class="gb-art" style="background-image:url(assets/kit/art-example.jpg);background-position:right center"></div>
@@ -328,12 +328,16 @@
       </div>
     </div>
   </div></div>
+  <div class="grid g2" style="margin-top:12px">
+    <figure class="card" style="margin:0;padding:10px"><img src="assets/refs/allowed-top-center.jpg" alt="상단 중앙 한 줄 헤드카피 허용 사례: AI 잘 쓴 사례, 라이브로 보기" style="width:100%;border-radius:10px;display:block"><figcaption class="desc" style="margin:8px 4px 2px"><span class="tag">허용 사례</span> 상단 중앙 한 줄. 무대 장면이 캔버스 전체를 채워요.</figcaption></figure>
+    <figure class="card" style="margin:0;padding:10px"><img src="assets/refs/bebal-left-empty.jpg" alt="피할 사례: 왼쪽을 단색 판으로 비운 배너" style="width:100%;border-radius:10px;display:block"><figcaption class="desc" style="margin:8px 4px 2px"><span class="tag gray">피할 사례</span> 왼쪽을 단색 판으로 비우고 제목을 가운데 높이에. 너무 비어 보여요.</figcaption></figure>
+  </div>
   <div class="tbl" style="margin-top:16px"><table>
     <tr><th>부품</th><th>클래스</th><th>규격(배너 높이 H 기준)</th></tr>
     <tr><td>틀</td><td><code>.gb</code> <code>--W</code> <code>--H</code></td><td>어두운 배너 <code>.gb--dark</code></td></tr>
     <tr><td>글자 덩어리</td><td><code>.gb-text</code></td><td>왼쪽 5%W · 위 17%H · 최대 폭 50%W</td></tr>
-    <tr><td>헤드카피만일 때</td><td><code>.gb-text--top</code></td><td>좌상단 · 위 9%H, 그림이 나머지를 채움</td></tr>
-    <tr><td>글자 뒤 대비</td><td><code>.gb-scrim</code> <code>.gb-scrim--light</code></td><td>그림 위 왼쪽에서 오른쪽으로 옅어지는 그라데이션</td></tr>
+    <tr><td>헤드카피만일 때</td><td><code>.gb-text--top</code> <code>--top-center</code> <code>--bottom-center</code></td><td>좌상단(위 9%H) · 상단 중앙(위 7%H) · 하단 중앙(아래 8%H)</td></tr>
+    <tr><td>글자 뒤 대비</td><td><code>.gb-scrim</code> <code>--light</code> <code>--top</code> <code>--bottom</code></td><td>글자 쪽에서 옅어지는 그라데이션</td></tr>
     <tr><td>라벨</td><td><code>.gb-label</code></td><td>SUIT 700 · 6.2%H</td></tr>
     <tr><td>헤드카피</td><td><code>.gb-head</code> + <code>.gb-accent</code></td><td>Paperlogy 900 · 17%H · 줄 간격 1.08 · 두 줄</td></tr>
     <tr><td>서브카피</td><td><code>.gb-sub</code></td><td>SUIT 600 · 5.7%H · 줄 간격 1.25</td></tr>

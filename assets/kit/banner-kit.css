@@ -25,3 +25,8 @@
 .gb-text--top{top:calc(var(--H)*0.09)}            /* 헤드카피만 있을 때: 좌상단 */
 .gb-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(21,20,19,.72) 0%,rgba(21,20,19,.38) 34%,rgba(21,20,19,0) 56%)}
 .gb-scrim--light{background:linear-gradient(100deg,rgba(250,248,246,.86) 0%,rgba(250,248,246,.45) 34%,rgba(250,248,246,0) 56%)}
+/* 10/1 지인: 헤드카피만일 때 가운데 한 줄도 허용(상단 중앙·하단 중앙). 그림은 그대로 캔버스 전체 */
+.gb-text--top-center{left:50%;transform:translateX(-50%);top:calc(var(--H)*0.07);max-width:calc(var(--W)*0.9);text-align:center}
+.gb-text--bottom-center{left:50%;transform:translateX(-50%);top:auto;bottom:calc(var(--H)*0.08);max-width:calc(var(--W)*0.9);text-align:center}
+.gb-scrim--top{background:linear-gradient(180deg,rgba(21,20,19,.7) 0%,rgba(21,20,19,0) 38%)}
+.gb-scrim--bottom{background:linear-gradient(0deg,rgba(21,20,19,.7) 0%,rgba(21,20,19,0) 40%)}
