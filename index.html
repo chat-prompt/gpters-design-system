@@ -132,6 +132,15 @@
   .do ul,.dont ul{padding-left:18px}
 
   /* patterns, gallery */
+  .gallery-group{border:1px solid var(--line);border-radius:14px;background:var(--panel);margin-top:12px;overflow:hidden}
+  .gallery-group summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;cursor:pointer;list-style:none;font-weight:700}
+  .gallery-group summary::-webkit-details-marker{display:none}
+  .gallery-group summary::after{content:"＋";font-size:24px;line-height:1;color:var(--muted);flex-shrink:0}
+  .gallery-group[open] summary::after{content:"−"}
+  .gallery-group summary:hover{background:var(--bg)}
+  .gallery-group summary:focus-visible{outline:2px solid var(--orange);outline-offset:-4px}
+  .gallery-group .grid{padding:0 20px 20px}
+
   figure{margin:0}
   figure img{width:100%;display:block;border-radius:12px;border:1px solid var(--line);background:#fff}
   figcaption{font-size:13px;color:var(--muted);margin-top:8px}
@@ -394,14 +403,22 @@
 <section id="gallery">
   <h2>갤러리</h2>
   <p class="desc"><span class="tag gray">검토 중</span>지인 팀장이 직접 만든 작업들이에요. 방향을 잡는 작업이고, 확정된 기준작은 아니에요.</p>
-  <h3>판매 카드뉴스 (사진형 · 하단 주황 띠 CTA · 1:1·4:5·9:16 세트)</h3>
-  <div class="grid g3" id="g-cards"></div>
-  <h3>캐릭터 장면 배너</h3>
-  <div class="grid g3" id="g-scenes"></div>
-  <h3>판매·이벤트 배너 (24기)</h3>
-  <div class="grid g3" id="g-sales"></div>
-  <h3>스터디 배너 (캐릭터 장면)</h3>
-  <div class="grid g3" id="g-study"></div>
+  <details class="gallery-group">
+    <summary>판매 카드뉴스 (사진형 · 하단 주황 띠 CTA · 1:1·4:5·9:16 세트)</summary>
+    <div class="grid g3" id="g-cards"></div>
+  </details>
+  <details class="gallery-group">
+    <summary>캐릭터 장면 배너</summary>
+    <div class="grid g3" id="g-scenes"></div>
+  </details>
+  <details class="gallery-group">
+    <summary>판매·이벤트 배너 (24기)</summary>
+    <div class="grid g3" id="g-sales"></div>
+  </details>
+  <details class="gallery-group">
+    <summary>스터디 배너 (캐릭터 장면)</summary>
+    <div class="grid g3" id="g-study"></div>
+  </details>
 </section>
 
 <footer><img src="assets/logo/wordmark-black.svg" alt="GPTers" /><span>© GPTers · 디자인 시스템 초안 (2026.09.30)</span><a href="https://gpters-brand.vercel.app">브랜드 에셋 페이지</a></footer>
