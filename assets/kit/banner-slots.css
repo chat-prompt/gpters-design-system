@@ -31,6 +31,8 @@
 .gs-cta--pill{border-radius:999px}
 /* 하단 주황 띠 CTA (판매 카드뉴스 방식) */
 .gs-strip{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:.3em;background:#EB5A10;color:#fff;font-family:'Paperlogy';font-weight:900;letter-spacing:-0.02em}
+/* 로고: 넣기로 한 지면에서만. 불투명도 55%로 배경에 녹임 */
+.gs-logo{position:absolute;display:block;opacity:.55;height:auto}
 .gs-tile{position:absolute;background:#EB5A10;display:flex;align-items:center;justify-content:center}
 .gs-tile img{display:block}
 
