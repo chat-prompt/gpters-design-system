@@ -34,3 +34,6 @@
 
 /* 제목 글자의 실제 시작선에 라벨·서브카피를 시각적으로 맞춘다. */
 .gb-label,.gb-sub{margin-left:calc(var(--W)*0.007)}
+
+/* 라벨·서브카피 없는 두 줄 제목: 위아래 여백 균형 */
+.gb-text--middle{top:50%;transform:translateY(-50%)}
