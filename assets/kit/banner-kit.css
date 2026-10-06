@@ -31,3 +31,6 @@
 .gb-text--bottom-center{left:50%;transform:translateX(-50%);top:auto;bottom:calc(var(--H)*0.08);max-width:calc(var(--W)*0.9);text-align:center}
 .gb-scrim--top{background:linear-gradient(180deg,rgba(21,20,19,.7) 0%,rgba(21,20,19,0) 38%)}
 .gb-scrim--bottom{background:linear-gradient(0deg,rgba(21,20,19,.7) 0%,rgba(21,20,19,0) 40%)}
+
+/* 제목 글자의 실제 시작선에 라벨·서브카피를 시각적으로 맞춘다. */
+.gb-label,.gb-sub{margin-left:calc(var(--W)*0.007)}
