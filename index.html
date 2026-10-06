@@ -354,19 +354,19 @@
 <section id="slots">
   <div class="eyebrow">Patterns</div>
   <h2>지면별 배너 예시 <span class="tag gray" style="vertical-align:middle;margin-left:8px">초안</span></h2>
-  <p class="desc">자주 쓰는 지면 11개를 실제 크기 비율로 짜봤어요. 어느 지면이든 <b>글자 → CTA → 그림</b> 순서로 정하고, 지면이 작아지면 서브카피, 라벨, 헤드 줄 수 순으로 덜어 내요. 헤드카피와 CTA는 끝까지 남겨요. 문구는 예시고, 그림 자리는 CSS 도형으로 대신했어요. 실제로는 멤버 결과물·실사용 화면 캡처, 모임 사진을 넣고, 캐릭터 장면은 한 가지 유형으로만 써요. 파일: <code>assets/kit/banner-slots.css</code></p>
+  <p class="desc">우리가 실제로 쓰는 지면 9개를 실제 크기 비율로 짜봤어요. 유료 광고는 메타만 하기 때문에 외부 광고망 규격은 넣지 않았어요. 어느 지면이든 <b>글자 → CTA → 그림</b> 순서로 정하고, 지면이 작아지면 서브카피, 라벨, 헤드 줄 수 순으로 덜어 내요. 헤드카피와 CTA는 끝까지 남겨요. 문구는 예시고, 그림 자리는 CSS 도형으로 대신했어요. 실제로는 멤버 결과물·실사용 화면 캡처, 모임 사진을 넣고, 캐릭터 장면은 한 가지 유형으로만 써요. 파일: <code>assets/kit/banner-slots.css</code></p>
 
   <h3>CTA 형태 한눈에</h3>
   <div class="tbl"><table>
     <tr><th>형태</th><th>쓰는 지면</th><th>규칙</th></tr>
-    <tr><td><b>이미지 밖 HTML 버튼</b></td><td>웹 사이드바, 뉴스레터 상단</td><td>이미지엔 헤드만. 버튼은 글자로 따로 둬서 이미지가 안 떠도 눌려요. 행동+이득 문구.</td></tr>
-    <tr><td><b>이미지 안 사각 버튼</b></td><td>와이드 띠, 리더보드, 박스, 세로 배너</td><td>반경 8px, 한 개만. 굵게 18.7px 이상이면 <code>#EB5A10</code>, 작으면 <code>#D34600</code>, 주황 바탕 위에서는 먹색 버튼.</td></tr>
-    <tr><td><b>알약 버튼</b></td><td>정사각, 모바일 작은 배너</td><td>반경 999px. 짧은 동사 2~5자.</td></tr>
+    <tr><td><b>이미지 밖 HTML 버튼</b></td><td>웹 홈 사이드바, 뉴스레터 상단</td><td>이미지엔 헤드만. 버튼은 글자로 따로 둬서 이미지가 안 떠도 눌려요. 행동+이득 문구.</td></tr>
+    <tr><td><b>이미지 안 사각 버튼</b></td><td>스터디 목록·상세 상단 띠</td><td>반경 8px, 한 개만. 굵게 18.7px 이상이면 <code>#EB5A10</code>, 작으면 <code>#D34600</code>, 주황 바탕 위에서는 먹색 버튼.</td></tr>
+    <tr><td><b>알약 버튼</b></td><td>메타 1:1</td><td>반경 999px. 짧은 동사 2~5자.</td></tr>
     <tr><td><b>하단 주황 띠</b></td><td>메타 4:5 피드</td><td>맨 아래 150px 띠에 문구와 화살표 하나. 판매 카드뉴스와 같은 방식.</td></tr>
-    <tr><td><b>플랫폼 버튼에 맡김</b></td><td>메타 9:16, 카톡 플친, 웹 썸네일</td><td>이미지 안에 버튼을 그리지 않아요. 플랫폼이 붙이는 버튼과 겹치고, 안전 영역을 먹어요.</td></tr>
+    <tr><td><b>플랫폼 버튼에 맡김</b></td><td>메타 9:16·1.91:1, 카톡 플친, 블로그·유튜브 썸네일</td><td>이미지 안에 버튼을 그리지 않아요. 플랫폼이 붙이는 버튼과 겹치고, 안전 영역을 먹어요.</td></tr>
   </table></div>
 
-  <h3>가로 배너</h3>
+  <h3>자사 웹·뉴스레터</h3>
 
   <div class="slot">
     <div class="slot-hd"><b>웹 사이드바 · 뉴스레터 상단</b><span class="tag">1080×650</span><span class="tag gray">CTA는 이미지 밖</span></div>
@@ -387,97 +387,21 @@
   </div>
 
   <div class="slot">
-    <div class="slot-hd"><b>와이드 띠 (빅배너)</b><span class="tag">970×250</span><span class="tag gray">버튼 이미지 안</span></div>
+    <div class="slot-hd"><b>스터디 목록·상세 상단 띠</b><span class="tag">1200×400</span><span class="tag gray">3:1</span><span class="tag gray">버튼 이미지 안</span></div>
     <div class="slot-stage">
-      <div class="gs-fit" data-w="970" data-h="250"><div class="gs gs--orange" style="--W:970px;--H:250px">
-        <div class="gs-label" style="left:48px;top:34px;font-size:16px;padding:9px 16px">AI 스터디 모집</div>
-        <div class="gs-head" style="left:48px;top:76px;font-size:54px">4주 동안 <span class="gs-accent">AI</span> 마스터하기</div>
-        <div class="gs-cta gs-cta--ink" style="left:48px;top:158px;height:50px;font-size:20px;padding:0 28px">스터디 보기 →</div>
-        <div class="gs-ui" style="left:690px;top:34px;width:150px;height:200px;transform:rotate(7deg);--r:14px;--k:22px"><i class="b"></i><i class="l l1"></i><i class="l l2"></i><i class="l l3"></i><i class="k">✓</i></div>
-        <div class="gs-ui gs-ui--tint" style="left:800px;top:84px;width:128px;height:140px;transform:rotate(-6deg);--r:12px;--k:18px"><i class="b"></i><i class="l l1"></i><i class="l l2"></i><i class="k">✓</i></div>
+      <div class="gs-fit" data-w="1200" data-h="400"><div class="gs gs--orange" style="--W:1200px;--H:400px">
+        <div class="gs-label" style="left:60px;top:56px;font-size:24px;padding:13px 22px">AI 스터디 모집</div>
+        <div class="gs-head" style="left:60px;top:116px;font-size:78px">4주 동안 <span class="gs-accent">AI</span> 마스터하기</div>
+        <div class="gs-cta gs-cta--ink" style="left:60px;top:258px;height:80px;font-size:30px;padding:0 44px">스터디 보기 →</div>
+        <div class="gs-ui" style="left:900px;top:54px;width:230px;height:300px;transform:rotate(7deg);--r:16px;--k:34px"><i class="b"></i><i class="l l1"></i><i class="l l2"></i><i class="l l3"></i><i class="k">✓</i></div>
+        <div class="gs-ui gs-ui--tint" style="left:1010px;top:150px;width:190px;height:200px;transform:rotate(-6deg);--r:13px;--k:26px"><i class="b"></i><i class="l l1"></i><i class="l l2"></i><i class="k">✓</i></div>
       </div></div>
     </div>
     <dl class="slot-spec">
       <div><dt>글자</dt><dd>라벨 하나, 헤드 한 줄(12자 안팎). 서브카피는 뺐어요.</dd></div>
-      <div><dt>CTA</dt><dd>헤드 아래 왼쪽에 먹색 버튼 하나, 높이 50px. 주황 바탕이라 먹색.</dd></div>
+      <div><dt>CTA</dt><dd>헤드 아래 왼쪽에 먹색 버튼 하나(주황 바탕이라 먹색). 띠 전체도 링크.</dd></div>
       <div><dt>그림</dt><dd>오른쪽 끝에 화면 카드 둘. 높이가 낮아서 장면 그림 말고 소품으로.</dd></div>
-      <div><dt>지킬 것</dt><dd>높이 250px라 두 줄 헤드 금지. 주황 위 강조는 노랑 한 가지.</dd></div>
-    </dl>
-  </div>
-
-  <div class="slot">
-    <div class="slot-hd"><b>리더보드</b><span class="tag">728×90</span><span class="tag gray">버튼 이미지 안</span></div>
-    <div class="slot-stage">
-      <div class="gs-fit" data-w="728" data-h="90"><div class="gs gs--cream" style="--W:728px;--H:90px;border:1px solid #ECECEC">
-        <div class="gs-head" style="left:24px;top:30px;font-size:27px">같이 하면 <span class="gs-accent">끝까지</span> 가요</div>
-        <div class="gs-cta gs-cta--small" style="left:420px;top:26px;height:38px;font-size:15px;padding:0 20px">신청하기</div>
-        <div class="gs-tile" style="right:0;top:0;width:90px;height:90px"><img src="assets/logo/icon-white.png" alt="" style="width:46px"></div>
-      </div></div>
-    </div>
-    <dl class="slot-spec">
-      <div><dt>글자</dt><dd>헤드 한 줄 14자 이내. 라벨·서브 없음.</dd></div>
-      <div><dt>CTA</dt><dd>짧은 버튼(2~5자)을 헤드 바로 오른쪽에. 높이 38px, 작은 글자라 <code>#D34600</code>.</dd></div>
-      <div><dt>그림</dt><dd>그림 대신 오른쪽 끝 아이콘 타일로 누구 광고인지만 알려요.</dd></div>
-      <div><dt>지킬 것</dt><dd>헤드 26px 이상, 어떤 글자도 14px 아래로 내리지 않기.</dd></div>
-    </dl>
-  </div>
-
-  <h3>세로·박스 배너</h3>
-
-  <div class="slot">
-    <div class="slot-hd"><b>미디엄 렉탱글</b><span class="tag">300×250</span><span class="tag gray">가로 꽉 버튼</span></div>
-    <div class="slot-stage">
-      <div class="gs-fit" data-w="300" data-h="250"><div class="gs gs--tint" style="--W:300px;--H:250px;border:1px solid #ECECEC">
-        <div class="gs-label" style="left:16px;top:16px;font-size:12px;padding:7px 12px">지피터스 뉴스레터</div>
-        <div class="gs-head" style="left:16px;top:50px;font-size:32px">이번 주 <span class="gs-accent">AI</span>,<br>이렇게 쓰기!</div>
-        <div class="gs-sub" style="left:16px;top:132px;font-size:14px">매주 월요일 보내드려요</div>
-        <div class="gs-cta gs-cta--small" style="left:16px;right:16px;bottom:18px;height:46px;font-size:17px">구독하기</div>
-        <div class="gs-ui" style="left:214px;top:-16px;width:100px;height:116px;transform:rotate(10deg);--r:10px;--k:14px"><i class="b"></i><i class="l l1"></i><i class="l l2"></i><i class="k">✓</i></div>
-      </div></div>
-    </div>
-    <dl class="slot-spec">
-      <div><dt>글자</dt><dd>작은 라벨, 헤드 두 줄(줄당 7자 안팎), 서브 한 줄.</dd></div>
-      <div><dt>CTA</dt><dd>맨 아래 가로 꽉 찬 버튼 한 개, 높이 46px. 누를 자리가 큰 게 이 지면의 핵심.</dd></div>
-      <div><dt>그림</dt><dd>오른쪽 위 구석에 소품 하나. 가운데를 비워 글자가 읽히게.</dd></div>
-      <div><dt>지킬 것</dt><dd>기사 본문 옆에 걸려요. 라벨 12px 아래로 내리지 않기.</dd></div>
-    </dl>
-  </div>
-
-  <div class="slot">
-    <div class="slot-hd"><b>하프페이지 (세로)</b><span class="tag">300×600</span><span class="tag gray">버튼 이미지 안</span></div>
-    <div class="slot-stage">
-      <div class="gs-fit" data-w="300" data-h="600"><div class="gs gs--dark" style="--W:300px;--H:600px">
-        <div class="gs-ui" style="left:44px;top:34px;width:212px;height:230px;transform:rotate(-5deg);--r:16px;--k:26px"><i class="b"></i><i class="l l1"></i><i class="l l2"></i><i class="l l3"></i><i class="k">✓</i></div>
-        <div class="gs-label" style="left:24px;top:296px;font-size:12px;padding:7px 12px">AI 스터디</div>
-        <div class="gs-head" style="left:24px;top:330px;font-size:36px">혼자 하면<br>멈추는 <span class="gs-accent">AI</span>,<br>같이 하면 가요</div>
-        <div class="gs-sub" style="left:24px;top:472px;font-size:15px;color:#D9D4CF">4주 동안 같이 끝까지 가요</div>
-        <div class="gs-cta" style="left:24px;right:24px;bottom:28px;height:52px;font-size:19px">스터디 보기 →</div>
-      </div></div>
-    </div>
-    <dl class="slot-spec">
-      <div><dt>글자</dt><dd>라벨, 헤드 세 줄, 서브 한 줄. 세로형이라 글자를 가장 많이 담을 수 있어요.</dd></div>
-      <div><dt>CTA</dt><dd>맨 아래 가로 꽉 버튼, 높이 52px. 글자 19px 굵게라 <code>#EB5A10</code>.</dd></div>
-      <div><dt>그림</dt><dd>위쪽에 화면 카드, 아래쪽에 글자. 위에서 아래로 그림 → 글자 → 버튼 순.</dd></div>
-      <div><dt>지킬 것</dt><dd>그림과 글자 사이 간격 32px 이상. 서브가 길어지면 줄 대신 문장을 덜어요.</dd></div>
-    </dl>
-  </div>
-
-  <h3>모바일</h3>
-
-  <div class="slot">
-    <div class="slot-hd"><b>모바일 배너</b><span class="tag">320×100</span><span class="tag gray">알약 버튼</span></div>
-    <div class="slot-stage">
-      <div class="gs-fit" data-w="320" data-h="100"><div class="gs gs--dark" style="--W:320px;--H:100px">
-        <div class="gs-tile" style="left:0;top:0;width:100px;height:100px"><img src="assets/logo/icon-white.png" alt="" style="width:52px"></div>
-        <div class="gs-head" style="left:114px;top:14px;font-size:18px;line-height:1.2">매주 월요일<br><span class="gs-accent">AI</span> 소식 받기</div>
-        <div class="gs-cta gs-cta--small gs-cta--pill" style="left:114px;top:60px;height:28px;font-size:12px;padding:0 14px">구독하기</div>
-      </div></div>
-    </div>
-    <dl class="slot-spec">
-      <div><dt>글자</dt><dd>헤드 두 줄 합쳐 12자 안팎. 라벨·서브 없음.</dd></div>
-      <div><dt>CTA</dt><dd>작은 알약 버튼. 배너 전체가 눌려서 버튼은 "누르는 곳" 신호예요.</dd></div>
-      <div><dt>그림</dt><dd>왼쪽 정사각 타일에 아이콘 하나. 장면 그림은 이 크기에선 안 읽혀요.</dd></div>
-      <div><dt>지킬 것</dt><dd>가장 작은 글자 12px. 버튼은 높이 28px 이상.</dd></div>
+      <div><dt>지킬 것</dt><dd>높이가 낮아 두 줄 헤드 금지. 주황 위 강조는 노랑 한 가지.</dd></div>
     </dl>
   </div>
 
@@ -539,7 +463,26 @@
     </dl>
   </div>
 
-  <h3>웹 썸네일</h3>
+  <div class="slot">
+    <div class="slot-hd"><b>피드 가로 1.91:1 (링크 광고)</b><span class="tag">1200×628</span><span class="tag gray">버튼은 플랫폼에 맡김</span></div>
+    <div class="slot-stage">
+      <div class="gs-fit" data-w="1200" data-h="628"><div class="gs gs--cream" style="--W:1200px;--H:628px">
+        <div class="gs-label" style="left:70px;top:70px;font-size:28px;padding:15px 26px">뉴스레터</div>
+        <div class="gs-head" style="left:70px;top:158px;font-size:112px">이번 주 <span class="gs-accent">AI</span>,<br>이렇게 쓰기!</div>
+        <div class="gs-sub" style="left:74px;top:466px;font-size:38px">매주 월요일 보내드려요</div>
+        <div class="gs-ui" style="left:800px;top:90px;width:300px;height:380px;transform:rotate(6deg);--r:21px;--k:44px"><i class="b"></i><i class="l l1"></i><i class="l l2"></i><i class="l l3"></i><i class="k">✓</i></div>
+        <div class="gs-ui gs-ui--tint" style="left:760px;top:380px;width:240px;height:200px;transform:rotate(-7deg);--r:17px;--k:34px"><i class="b"></i><i class="l l1"></i><i class="l l2"></i><i class="k">✓</i></div>
+      </div></div>
+    </div>
+    <dl class="slot-spec">
+      <div><dt>글자</dt><dd>라벨, 헤드 두 줄, 서브 한 줄. 가로형이라 서브까지 담을 수 있어요.</dd></div>
+      <div><dt>CTA</dt><dd>이미지 안에 버튼을 그리지 않아요. 메타가 아래에 붙이는 버튼과 같은 말로 맞춰요.</dd></div>
+      <div><dt>그림</dt><dd>오른쪽에 화면 카드. 글자 쪽도 같은 배경이 이어져요.</dd></div>
+      <div><dt>지킬 것</dt><dd>모바일 피드에서 폭이 줄어도 헤드 100px 이상. 가장자리 60px 안.</dd></div>
+    </dl>
+  </div>
+
+  <h3>썸네일</h3>
 
   <div class="slot">
     <div class="slot-hd"><b>블로그·og 썸네일</b><span class="tag">1200×630</span><span class="tag gray">CTA 없음</span></div>
@@ -556,6 +499,24 @@
       <div><dt>CTA</dt><dd>없어요. 썸네일은 글로 들어가는 문이라 버튼이 필요 없어요.</dd></div>
       <div><dt>그림</dt><dd>글 속 실제 화면이나 결과물 캡처. 없으면 화면 카드 도형.</dd></div>
       <div><dt>지킬 것</dt><dd>가장자리 60px 안. 카톡·슬랙 미리보기에서 작게 잘려도 헤드가 읽혀야 해요.</dd></div>
+    </dl>
+  </div>
+
+  <div class="slot">
+    <div class="slot-hd"><b>유튜브 썸네일</b><span class="tag">1280×720</span><span class="tag gray">CTA 없음</span></div>
+    <div class="slot-stage">
+      <div class="gs-fit" data-w="1280" data-h="720"><div class="gs gs--dark" style="--W:1280px;--H:720px">
+        <div class="gs-label" style="left:70px;top:64px;font-size:34px;padding:18px 30px">실습</div>
+        <div class="gs-head" style="left:70px;top:170px;font-size:150px">AI 자동화<br><span class="gs-accent">이렇게</span> 해요</div>
+        <div class="gs-ui" style="left:930px;top:90px;width:300px;height:380px;transform:rotate(7deg);--r:22px;--k:46px"><i class="b"></i><i class="l l1"></i><i class="l l2"></i><i class="l l3"></i><i class="k">✓</i></div>
+        <div class="gs-safe" style="left:auto;right:24px;bottom:24px;width:210px;height:70px;border-radius:12px;font-size:22px"><span>재생시간 자리</span></div>
+      </div></div>
+    </div>
+    <dl class="slot-spec">
+      <div><dt>글자</dt><dd>라벨 하나, 헤드 두 줄(150px 안팎). 제목과 같은 말을 되풀이하지 않고 짧게.</dd></div>
+      <div><dt>CTA</dt><dd>없어요. 썸네일은 영상으로 들어가는 문이라 버튼이 필요 없어요.</dd></div>
+      <div><dt>그림</dt><dd>영상 속 장면이나 결과 화면. 없으면 화면 카드 도형.</dd></div>
+      <div><dt>지킬 것</dt><dd>오른쪽 아래 재생시간 자리 비우기. 작은 화면에서도 헤드가 읽혀야 해요.</dd></div>
     </dl>
   </div>
 
@@ -576,6 +537,7 @@
       <div><dt>지킬 것</dt><dd>채팅 목록에서 작게 보여서 글자 2줄, 96px 안팎. 문구는 메시지 본문과 겹치지 않게.</dd></div>
     </dl>
   </div>
+
 </section>
 
 
