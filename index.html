@@ -131,6 +131,23 @@
   .do b{color:#227A36}.dont b{color:#C0392B}
   .do ul,.dont ul{padding-left:18px}
 
+  .kit-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+  .kit-panel{min-width:0;padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+  .kit-panel h3{margin:0 0 16px;font-size:16px}
+  .banner-guide,.headline-guide{position:relative;aspect-ratio:2/1;border:1px solid #D6CDC4;border-radius:10px;background:linear-gradient(120deg,#FAF8F6,#EEE7DF);overflow:hidden;container-type:inline-size}
+  .guide-copy{position:absolute;left:5%;top:17%;width:50%;border-left:1px dashed #D34600;padding-left:0}
+  .guide-copy strong{display:block;font-family:Paperlogy;font-weight:900;font-size:8.5cqw;line-height:1.08;letter-spacing:-.02em;white-space:nowrap}
+  .guide-label{display:block;font-size:3.1cqw;font-weight:700;margin-bottom:1.9cqw}
+  .guide-sub{display:block;font-size:2.85cqw;margin-top:1.75cqw;white-space:nowrap}
+  .guide-art{position:absolute;right:5%;top:10%;width:38%;height:80%;border:2px dashed #897F73;border-radius:45% 45% 20% 20%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:3cqw;font-weight:700;background:#FFFFFF70}
+  .guide-art span{font-size:2.6cqw;font-weight:500;margin-top:12px}
+  .guide-note{margin:12px 0 0;font-size:13px;color:var(--muted);line-height:1.7}
+  .headline-panel{margin-top:20px}
+  .headline-guide strong{position:absolute;left:5%;top:9%;font-family:Paperlogy;font-size:10cqw;font-weight:900;line-height:1.08;letter-spacing:-.02em;z-index:1}
+  .headline-guide strong span{color:var(--orange)}
+  .headline-art{position:absolute;right:5%;top:10%;width:38%;height:80%;border:2px dashed #897F73;display:flex;align-items:center;justify-content:center;border-radius:20px;font-size:2.5cqw;text-align:center}
+  @media(max-width:1100px){.kit-pair{grid-template-columns:1fr}}
+
   /* patterns, gallery */
   .gallery-group{border:1px solid var(--line);border-radius:14px;background:var(--panel);margin-top:12px;overflow:hidden}
   .gallery-group summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;cursor:pointer;list-style:none;font-weight:700}
@@ -317,29 +334,30 @@
     <b style="color:#C2410C">⚠️ 아직 확정된 기준이 아니에요</b>
     <p class="desc" style="margin:6px 0 0">기준작(참고 배너)부터 아직 검토 중이에요. 여기 수치를 정답으로 쓰지 말고, 시안을 만들 때 출발점으로만 써요. 기준작이 확정되면 수치를 다시 재서 바꿔요.</p>
   </div>
-  <p class="desc">뉴스레터 배너 시안을 픽셀로 재서 만든 부품이에요. 모든 크기가 배너 높이 비율이라 규격이 바뀌어도 그대로 맞아요. 손으로 수치를 바꾸지 않고 조립만 해요. 파일: <code>assets/kit/banner-kit.css</code></p>
-  <div class="stage" style="position:relative"><span class="tag gray" style="position:absolute;left:14px;top:12px;z-index:2">예시 · 확정 아님</span><div class="demo-wrap" id="demo">
-    <div class="gb" style="--W:700px;--H:350px">
-      <div class="gb-art" style="background-image:url(assets/kit/art-example.jpg);background-position:right center"></div>
-      <div class="gb-text">
-        <div class="gb-label">지피터스 뉴스레터</div>
-        <div class="gb-head gb-head--m">이번 주 <span class="gb-accent">AI</span>,<br>이렇게 쓰기!</div>
-        <div class="gb-sub">새로운 소식과 직접 써본 활용법을<br>매주 월요일 보내드려요</div>
+  <p class="desc">뉴스레터 배너 시안을 픽셀로 재서 만든 부품이에요. 모든 크기가 배너 높이 비율이라 규격이 바뀌어도 그대로 맞아요. 수치는 시안의 출발점으로 쓰고, 문구와 소재에 맞춰 조정해요. 파일: <code>assets/kit/banner-kit.css</code></p>
+  <div class="kit-pair">
+    <div class="kit-panel">
+      <h3>배치 가이드 · 검토 중</h3>
+      <div class="banner-guide">
+        <div class="guide-copy"><span class="guide-label">라벨</span><strong>이번 주 AI,<br>이렇게 쓰기!</strong><span class="guide-sub">서브카피는 제목과 같은 왼쪽 선에</span></div>
+        <div class="guide-art">사진 · 일러스트<br>캐릭터 영역<span>캐릭터 사용 시<br>높이 70~90%H<br>폭 35~45%W</span></div>
       </div>
+      <p class="guide-note">왼쪽 여백 5%W · 글자 영역 최대 50%W<br>제목 17%H · 라벨 6.2%H · 서브카피 5.7%H<br>1080×540 기준: 제목 92px · 라벨 33px · 서브카피 31px</p>
     </div>
-  </div></div>
-  <p class="desc" style="margin-top:14px"><b>왼쪽 가운데 쪽 자리(<code>.gb-text</code>)는 헤드카피 위아래로 라벨·서브카피·버튼이 함께 들어갈 때만 써요.</b> 헤드카피만 있으면 거기 두지 않아요(애매하게 떠 보여요).<br><b>글자가 적을 때(헤드카피만) 허용하는 자리 셋</b> · 좌상단 <code>.gb-text--top</code> / 상단 중앙 한 줄 <code>.gb-text--top-center</code> / 하단 중앙 한 줄 <code>.gb-text--bottom-center</code>. 어느 쪽이든 그림이 캔버스 전체를 채우고, 왼쪽을 단색 판으로 비우지 않아요.</p>
-  <div class="stage" style="position:relative"><span class="tag gray" style="position:absolute;left:14px;top:12px;z-index:2">예시 · 헤드카피만</span><div class="demo-wrap">
-    <div class="gb" style="--W:700px;--H:350px">
-      <div class="gb-art" style="background-image:url(assets/kit/art-example.jpg);background-position:right center"></div>
-      <div class="gb-text gb-text--top">
-        <div class="gb-head">이번 주 <span class="gb-accent">AI</span>,<br>이렇게!</div>
-      </div>
+    <div class="kit-panel">
+      <h3>적용 예시 · 확정 아님</h3>
+      <div class="demo-wrap"><div class="gb">
+        <div class="gb-art" style="background-image:url(assets/kit/art-example.jpg);background-position:right center"></div>
+        <div class="gb-text"><div class="gb-label">지피터스 뉴스레터</div><div class="gb-head">이번 주 <span class="gb-accent">AI</span>,<br>이렇게 쓰기!</div><div class="gb-sub">새로운 소식과 직접 써본 활용법을<br>매주 월요일 보내드려요</div></div>
+      </div></div>
+      <p class="guide-note">캐릭터를 사용한 한 가지 예시예요. 사진·일러스트·실제 결과 화면으로 바꿔도 돼요.</p>
     </div>
-  </div></div>
-  <div class="grid g2" style="margin-top:12px">
-    <figure class="card" style="margin:0;padding:10px"><img src="assets/refs/allowed-top-center.jpg" alt="상단 중앙 한 줄 헤드카피 허용 사례: AI 잘 쓴 사례, 라이브로 보기" style="width:100%;border-radius:10px;display:block"><figcaption class="desc" style="margin:8px 4px 2px"><span class="tag">허용 사례</span> 상단 중앙 한 줄. 무대 장면이 캔버스 전체를 채워요.</figcaption></figure>
-    <figure class="card" style="margin:0;padding:10px"><img src="assets/refs/bebal-left-empty.jpg" alt="피할 사례: 왼쪽을 단색 판으로 비운 배너" style="width:100%;border-radius:10px;display:block"><figcaption class="desc" style="margin:8px 4px 2px"><span class="tag gray">피할 사례</span> 왼쪽을 단색 판으로 비우고 제목을 가운데 높이에. 너무 비어 보여요.</figcaption></figure>
+  </div>
+  <p class="desc" style="margin-top:16px">캐릭터는 선택이에요. 뽀짝이를 반드시 쓸 필요는 없어요. 위 영역은 캐릭터를 넣을 때의 크기와 위치를 잡는 출발점이고, 소재에 맞춰 조정해요. 라벨·제목·서브카피의 왼쪽 시작선은 맞춰요.</p>
+  <div class="kit-panel headline-panel">
+    <h3>헤드카피만 있을 때</h3>
+    <div class="headline-guide"><strong>이번 주 <span>AI</span>,<br>이렇게!</strong><div class="headline-art">사진 · 일러스트 · 결과 화면</div></div>
+    <p class="guide-note">왼쪽 5%W · 위 9%H · 제목 20%H (1080×540 기준 108px)<br>문구가 짧으면 제목을 크게 두고, 나머지 공간은 선택한 소재가 채워요. 배경은 캔버스 전체에 이어져요.</p>
   </div>
   <div class="tbl" style="margin-top:16px"><table>
     <tr><th>부품</th><th>클래스</th><th>규격(배너 높이 H 기준)</th></tr>
@@ -348,11 +366,11 @@
     <tr><td>헤드카피만일 때</td><td><code>.gb-text--top</code> <code>--top-center</code> <code>--bottom-center</code></td><td>좌상단(위 9%H) · 상단 중앙(위 7%H) · 하단 중앙(아래 8%H)</td></tr>
     <tr><td>글자 뒤 대비</td><td><code>.gb-scrim</code> <code>--light</code> <code>--top</code> <code>--bottom</code></td><td>글자 쪽에서 옅어지는 그라데이션</td></tr>
     <tr><td>라벨</td><td><code>.gb-label</code></td><td>SUIT 700 · 6.2%H</td></tr>
-    <tr><td>헤드카피</td><td><code>.gb-head</code> + <code>.gb-accent</code></td><td>Paperlogy 900 · 17%H · 줄 간격 1.08 · 두 줄</td></tr>
+    <tr><td>헤드카피</td><td><code>.gb-head</code> + <code>.gb-accent</code></td><td>Paperlogy 900 · 17%H (헤드카피만 20%H) · 줄 간격 1.08 · 두 줄</td></tr>
     <tr><td>서브카피</td><td><code>.gb-sub</code></td><td>SUIT 600 · 5.7%H · 줄 간격 1.25</td></tr>
   </table></div>
   <div class="grid g2" style="margin-top:16px">
-    <div class="do"><b>DO</b><ul><li>그림은 캔버스 전체에 장면째 깔고, 캐릭터는 오른쪽에 크게. 글자 쪽도 같은 배경이 이어지게(단색 판으로 자르지 않기)</li><li>최종 규격 비율 그대로 그림을 만들기</li><li>렌더 뒤 글자가 그림에 닿지 않는지 눈으로 확인</li><li>글자가 적으면(헤드카피만) 타이틀을 좌상단 <code>.gb-text--top</code>에 붙이고 그림이 나머지를 채우게</li><li>글자가 배경에 묻히면 <code>.gb-scrim</code>(그라데이션)으로 대비 맞추기</li></ul></div>
+    <div class="do"><b>DO</b><ul><li>그림은 캔버스 전체에 장면째 깔고, 캐릭터를 쓴다면 오른쪽 영역을 기준으로 크기를 잡아요. 글자 쪽도 같은 배경이 이어지게(단색 판으로 자르지 않기)</li><li>최종 규격 비율 그대로 그림을 만들기</li><li>렌더 뒤 글자가 그림에 닿지 않는지 눈으로 확인</li><li>글자가 적으면(헤드카피만) 타이틀을 좌상단 <code>.gb-text--top</code>에 붙이고 그림이 나머지를 채우게</li><li>글자가 배경에 묻히면 <code>.gb-scrim</code>(그라데이션)으로 대비 맞추기</li></ul></div>
     <div class="dont"><b>DON'T</b><ul><li>다른 비율 그림을 잘라서 캐릭터를 글자 쪽으로 밀기</li><li>글자를 줄여서 억지로 끼우기</li><li>한 단어만 한 줄에 남기는 줄바꿈</li><li>왼쪽을 단색 판으로 비워 두고 그림을 오른쪽 절반에만 넣기(빈 배너가 돼요)</li></ul></div>
   </div>
 </section>
@@ -444,8 +462,7 @@
   gal('g-sales',[['sales-blind-hero.jpg','블라인드 할인 오늘 마감'],['sales-super-open.jpg','슈퍼얼리버드 OPEN'],['sales-super-d2.jpg','슈퍼얼리버드 D-2'],['sales-blind-wide.jpg','눈 가리고 질러도 되는 날'],['sales-super-last-day.jpg','4주 동안 AI 마스터하기'],['sales-early-wide.jpg','4주 동안 AI 마스터하기(가로)'],['sales-grit-racing.jpg','4주 동안 절대 포기 못하게 끌고 갑니다 (1080×650)'],['sales-early-last-card.jpg','올해 마지막입니다']]);
   gal('g-study',[['study-hero.jpg','메인'],['study-unicorn-sprint.jpg','서비스 성장'],['study-kkulim-studio.jpg','영상 제작'],['study-voice-agent.jpg','음성 AI 비서'],['study-godot-game.jpg','게임 개발'],['study-owner-time.jpg','사업장 자동화']]);
   // 배너 키트 데모: 컨테이너 폭에 맞춰 --W/--H 재계산(2:1)
-  const demo=document.querySelector('#demo .gb');
-  const fit=()=>{const w=Math.min(document.getElementById('demo').clientWidth,900);demo.style.setProperty('--W',w+'px');demo.style.setProperty('--H',Math.round(w/2)+'px')};
+  const fit=()=>document.querySelectorAll('.demo-wrap').forEach(wrap=>{const demo=wrap.querySelector('.gb');const w=wrap.clientWidth;demo.style.setProperty('--W',w+'px');demo.style.setProperty('--H',w/2+'px')});
   addEventListener('resize',fit);fit();
   // 현재 위치 메뉴 강조
   const links=[...document.querySelectorAll('.nav a')];
