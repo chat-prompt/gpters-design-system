@@ -145,6 +145,7 @@
   .guide-art span{font-size:2.6cqw;font-weight:500;margin-top:12px}
   .guide-note{margin:12px 0 0;font-size:13px;color:var(--muted);line-height:1.7}
   .headline-panel{margin-top:20px}
+  .headline-safe{position:absolute;inset:0;background:linear-gradient(90deg,rgba(250,248,246,.98) 0%,rgba(250,248,246,.96) 48%,rgba(250,248,246,0) 62%)}
   .headline-guide strong{position:absolute;left:5%;top:9%;font-family:Paperlogy;font-size:10cqw;font-weight:800;line-height:1.08;letter-spacing:-.02em;z-index:1}
   .headline-guide strong span{color:var(--orange)}
   .headline-art{position:absolute;right:5%;top:10%;width:38%;height:80%;border:2px dashed #897F73;display:flex;align-items:center;justify-content:center;border-radius:20px;font-size:2.5cqw;text-align:center}
@@ -380,9 +381,10 @@
     <h3>적용 예시 · 뽀케터</h3>
     <div class="demo-wrap"><div class="gb">
       <div class="gb-art" style="background-image:url(assets/kit/bboketer-learning.png);background-position:center" role="img" aria-label="노트를 읽으며 즐겁게 배우는 뽀케터"></div>
+      <div class="headline-safe" aria-hidden="true"></div>
       <div class="gb-text gb-text--top"><div class="gb-head"><span style="font-weight:500">AI와 함께</span><br>배우는 하루</div></div>
     </div></div>
-    <p class="guide-note">제목만 크게 넣은 예시예요. 캐릭터와 배경은 제목이 가리지 않는 오른쪽에 두었어요.</p>
+    <p class="guide-note">제목 뒤는 옅은 그라데이션으로 정리했어요. 캐릭터·소품·창틀·액자 선은 글자 영역 밖에 두고, 마지막 글자와 최소 한 글자 높이의 1/4만큼 간격을 둬요.</p>
   </div>
   </div>
   <div class="tbl" style="margin-top:16px"><table>
@@ -396,7 +398,7 @@
     <tr><td>서브카피</td><td><code>.gb-sub</code></td><td>SUIT 300 · 5.7%H · 줄 간격 1.25</td></tr>
   </table></div>
   <div class="grid g2" style="margin-top:16px">
-    <div class="do"><b>DO</b><ul><li>그림은 캔버스 전체에 장면째 깔고, 캐릭터를 쓴다면 오른쪽 영역을 기준으로 크기를 잡아요. 글자 쪽도 같은 배경이 이어지게(단색 판으로 자르지 않기)</li><li>최종 규격 비율 그대로 그림을 만들기</li><li>렌더 뒤 글자가 그림에 닿지 않는지 눈으로 확인</li><li>글자가 적으면(헤드카피만) 타이틀을 좌상단 <code>.gb-text--top</code>에 붙이고 그림이 나머지를 채우게</li><li>글자가 배경에 묻히면 <code>.gb-scrim</code>(그라데이션)으로 대비 맞추기</li></ul></div>
+    <div class="do"><b>DO</b><ul><li>그림은 캔버스 전체에 장면째 깔고, 캐릭터를 쓴다면 오른쪽 영역을 기준으로 크기를 잡아요. 글자 쪽도 같은 배경이 이어지게(단색 판으로 자르지 않기)</li><li>최종 규격 비율 그대로 그림을 만들기</li><li>제목의 두 줄 전체와 여유 공간을 먼저 확보하고, 캐릭터·소품·배경의 선은 그 영역 밖에 배치</li><li>글자와 그림 사이 최소 0.25em 간격. 겹치면 그림 위치나 배경을 조정하고, 글자를 줄여 해결하지 않기</li><li>글자가 적으면(헤드카피만) 타이틀을 좌상단 <code>.gb-text--top</code>에 붙이고 그림이 나머지를 채우게</li><li>글자가 배경에 묻히면 <code>.gb-scrim</code>(그라데이션)으로 대비 맞추기</li></ul></div>
     <div class="dont"><b>DON'T</b><ul><li>다른 비율 그림을 잘라서 캐릭터를 글자 쪽으로 밀기</li><li>글자를 줄여서 억지로 끼우기</li><li>한 단어만 한 줄에 남기는 줄바꿈</li><li>왼쪽을 단색 판으로 비워 두고 그림을 오른쪽 절반에만 넣기(빈 배너가 돼요)</li></ul></div>
   </div>
 </section>
