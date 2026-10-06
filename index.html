@@ -156,7 +156,16 @@
   .gallery-group[open] summary::after{content:"−"}
   .gallery-group summary:hover{background:var(--bg)}
   .gallery-group summary:focus-visible{outline:2px solid var(--orange);outline-offset:-4px}
-  .gallery-group .grid{padding:0 20px 20px}
+  .gallery-group .grid{padding:0 20px 20px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+  .gallery-thumb{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;border-radius:12px}
+  .gallery-thumb img{height:130px;object-fit:contain;background:#F6F6F6}
+  .gallery-thumb:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+  .image-viewer{border:0;border-radius:16px;padding:16px;background:var(--panel);max-width:92vw;max-height:92vh}
+  .image-viewer::backdrop{background:rgba(0,0,0,.75)}
+  .image-viewer img{display:block;max-width:85vw;max-height:75vh;object-fit:contain;margin:auto}
+  .image-viewer header{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:12px}
+  .image-viewer button{cursor:pointer;border:1px solid var(--line);background:var(--bg);padding:8px 14px;border-radius:8px;font:inherit}
+  @media(max-width:480px){.gallery-group .grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 12px 12px}.gallery-thumb img{height:100px}}
 
   figure{margin:0}
   figure img{width:100%;display:block;border-radius:12px;border:1px solid var(--line);background:#fff}
@@ -384,7 +393,6 @@
   <div class="grid g2">
     <figure><img src="assets/refs/bright-running.jpg" alt="밝은 가로 배너: 왼쪽 글자, 오른쪽 달리는 캐릭터" loading="lazy" /><figcaption><b>가로 배너</b> · 왼쪽 라벨→헤드카피→서브카피, 오른쪽 캐릭터가 장면 안에서 연기</figcaption></figure>
     <figure><img src="assets/refs/dark-paper-pile.jpg" alt="어두운 가로 배너: 종이 더미에서 솟아오른 캐릭터" loading="lazy" /><figcaption><b>가로 배너(어두운)</b> · 흰 칩 라벨, 핵심 단어만 주황</figcaption></figure>
-    <figure><img src="assets/refs/study-hero.jpg" alt="3:1 스터디 배너: 캐릭터 장면과 오른쪽 제목" loading="lazy" /><figcaption><b>3:1 스터디 배너</b> · 캐릭터 장면 + 오른쪽 굵은 흰 제목과 알약 태그 둘</figcaption></figure>
   </div>
 </section>
 
@@ -442,6 +450,7 @@
 <footer><img src="assets/logo/wordmark-black.svg" alt="GPTers" /><span>© GPTers · 디자인 시스템 초안 (2026.09.30)</span><a href="https://gpters-brand.vercel.app">브랜드 에셋 페이지</a></footer>
 </main>
 
+<dialog class="image-viewer" id="image-viewer" aria-labelledby="image-title"><header><b id="image-title"></b><button type="button" id="image-close" aria-label="이미지 닫기">닫기 ×</button></header><img id="image-full" alt=""></dialog>
 <div class="toast" id="toast">복사했어요</div>
 
 <script>
@@ -455,12 +464,16 @@
   colors.forEach(([n,h,u])=>{const b=document.createElement('button');b.className='sw';b.type='button';
     b.innerHTML=`<i style="background:${h}"></i><div><b>${n}</b><small>${h}</small><em>${u}</em></div>`;
     b.onclick=async()=>{try{await navigator.clipboard.writeText(h)}catch(e){}toast.textContent=h+' 복사했어요';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1200)};sw.appendChild(b)});
-  const gal=(id,list)=>{const el=document.getElementById(id);list.forEach(([f,c])=>{el.insertAdjacentHTML('beforeend',`<figure><img src="assets/refs/${f}" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`)})};
-  const galw=(id,list)=>{const el=document.getElementById(id);list.forEach(([f,c])=>{el.insertAdjacentHTML('beforeend',`<figure><img src="assets/works/${f}" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`)})};
+  const gal=(id,list)=>{const el=document.getElementById(id);list.forEach(([f,c])=>{el.insertAdjacentHTML('beforeend',`<figure><button class="gallery-thumb" type="button" aria-label="${c} 크게 보기"><img src="assets/refs/${f}" alt="${c}" loading="lazy"></button><figcaption>${c}</figcaption></figure>`)})};
+  const galw=(id,list)=>{const el=document.getElementById(id);list.forEach(([f,c])=>{el.insertAdjacentHTML('beforeend',`<figure><button class="gallery-thumb" type="button" aria-label="${c} 크게 보기"><img src="assets/works/${f}" alt="${c}" loading="lazy"></button><figcaption>${c}</figcaption></figure>`)})};
   galw('g-cards',[['09_image_offmeet_v7_4x5.jpg','10명 중 8명이 재신청하는 스터디'],['10_image_podium_v3_4x5.jpg','포기할 수 없게 끌고 갑니다(발표)'],['11_image_speaker_v3_4x5.jpg','포기할 수 없게 끌고 갑니다(강연)']]);
   galw('g-scenes',[['og-4cats.jpg','지피터스 AI 스터디 24기 OG'],['study-info-session-live.jpg','오늘 밤 9시 스터디 설명회 라이브'],['youtube-channel-art.jpg','유튜브 채널아트']]);
-  gal('g-sales',[['sales-blind-hero.jpg','블라인드 할인 오늘 마감'],['sales-super-open.jpg','슈퍼얼리버드 OPEN'],['sales-super-d2.jpg','슈퍼얼리버드 D-2'],['sales-blind-wide.jpg','눈 가리고 질러도 되는 날'],['sales-super-last-day.jpg','4주 동안 AI 마스터하기'],['sales-early-wide.jpg','4주 동안 AI 마스터하기(가로)'],['sales-grit-racing.jpg','4주 동안 절대 포기 못하게 끌고 갑니다 (1080×650)'],['sales-early-last-card.jpg','올해 마지막입니다']]);
+  gal('g-sales',[['sales-blind-hero.jpg','블라인드 할인 오늘 마감'],['sales-blind-wide.jpg','눈 가리고 질러도 되는 날'],['sales-super-open.jpg','슈퍼얼리버드 OPEN'],['sales-super-d2.jpg','슈퍼얼리버드 D-2'],['sales-super-last-day.jpg','4주 동안 AI 마스터하기'],['sales-early-wide.jpg','4주 동안 AI 마스터하기(가로)'],['sales-grit-racing.jpg','4주 동안 절대 포기 못하게 끌고 갑니다 (1080×650)'],['sales-early-last-card.jpg','올해 마지막입니다']]);
   gal('g-study',[['study-hero.jpg','메인'],['study-unicorn-sprint.jpg','서비스 성장'],['study-kkulim-studio.jpg','영상 제작'],['study-voice-agent.jpg','음성 AI 비서'],['study-godot-game.jpg','게임 개발'],['study-owner-time.jpg','사업장 자동화']]);
+  const viewer=document.getElementById('image-viewer'), full=document.getElementById('image-full'), imageTitle=document.getElementById('image-title');
+  document.getElementById('gallery').addEventListener('click',e=>{const button=e.target.closest('.gallery-thumb');if(!button)return;const image=button.querySelector('img');full.src=image.src;full.alt=image.alt;imageTitle.textContent=image.alt;viewer.showModal()});
+  document.getElementById('image-close').addEventListener('click',()=>viewer.close());
+  viewer.addEventListener('click',e=>{if(e.target===viewer){const r=viewer.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)viewer.close()}});
   // 배너 키트 데모: 컨테이너 폭에 맞춰 --W/--H 재계산(2:1)
   const fit=()=>document.querySelectorAll('.demo-wrap').forEach(wrap=>{const demo=wrap.querySelector('.gb');const w=wrap.clientWidth;demo.style.setProperty('--W',w+'px');demo.style.setProperty('--H',w/2+'px')});
   addEventListener('resize',fit);fit();
