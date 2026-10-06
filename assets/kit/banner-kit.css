@@ -8,8 +8,8 @@
 .gb-text{position:absolute;left:calc(var(--W)*0.05);top:calc(var(--H)*0.17);max-width:calc(var(--W)*0.50)}
 /* 라벨(밝은 배너에서 잰 값). 칩형·CTA 버튼·날짜 배지는 판매 배너를 재서 다시 넣는다(9/30 눈대중 값은 뺐다) */
 .gb-label{font-family:'SUIT';font-weight:700;font-size:calc(var(--H)*0.062);line-height:1;letter-spacing:-0.02em;margin-bottom:calc(var(--H)*0.038)}
-/* 헤드카피: 페이퍼로지 Black, 뜻 단위 두 줄, 줄 간격 붙임 */
-.gb-head{font-family:'Paperlogy';font-weight:900;font-size:calc(var(--H)*0.17);line-height:1.08;letter-spacing:-0.02em;white-space:nowrap}
+/* 헤드카피: 페이퍼로지 ExtraBold, 뜻 단위 두 줄, 줄 간격 붙임 */
+.gb-head{font-family:'Paperlogy';font-weight:800;font-size:calc(var(--H)*0.17);line-height:1.08;letter-spacing:-0.02em;white-space:nowrap}
 .gb-head--m{font-size:calc(var(--H)*0.145)}   /* 문구가 길 때(어두운 배너 크기) */
 .gb-accent{color:#EB5A10}
 .gb--dark .gb-accent{color:#FF7A1A}
