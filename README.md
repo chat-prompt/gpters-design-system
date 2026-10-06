@@ -4,3 +4,4 @@
 - 원본 규칙: 마케팅 위키 `brand/design-system.md`, `brand/design-system-structure.md`, `brand/assets/components/banner-kit.css`
 - 키트를 바꾸면 `assets/kit/banner-kit.css`도 위키 것으로 다시 복사한다.
 - 폰트: Paperlogy(SIL OFL, Freesentation 공식), SUIT(SIL OFL, sun-typeface 공식 woff2), Clash Grotesk는 Fontshare CSS로만 불러온다(파일 재배포 금지).
+- 지면별 배너 예시: `assets/kit/banner-slots.css`는 우리가 만든 파일(위키 정본 아님). `index.html`의 `#slots` 섹션과 `DESIGN.md` 5-1이 짝이다.
