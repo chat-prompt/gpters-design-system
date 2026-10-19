@@ -46,7 +46,11 @@
   --gp-shadow-sm:0 1px 2px rgba(74,52,32,.06),0 2px 6px rgba(74,52,32,.06);
   --gp-shadow-md:0 2px 4px rgba(74,52,32,.06),0 8px 20px rgba(74,52,32,.10);
   --gp-shadow-lg:0 4px 8px rgba(74,52,32,.06),0 18px 40px rgba(74,52,32,.14);
-  /* 돌출 그림자: 한 장을 통째로 옮기면 둥근 모서리(오른쪽 위·왼쪽 아래)에서 틈이 생긴다. 1px씩 쌓아 이어 붙인다 [확정 10/19] */
+  /* 카드 기본 그림자: 테두리 없이, 덜 퍼지게, 갈색 기운 [확정 10/19] */
+  --gp-shadow-card:3px 4px 10px rgba(74,51,44,.32);
+  --gp-shadow-card-strong:4px 6px 14px rgba(74,51,44,.42); /* 강조(주황) 카드 */
+
+  /* (선택) 돌출 그림자: 테두리를 넣을 때만. 한 장을 통째로 옮기면 둥근 모서리(오른쪽 위·왼쪽 아래)에서 틈이 생긴다. 1px씩 쌓아 이어 붙인다 [확정 10/19] */
   --gp-shadow-pop:1px 1px 0 var(--gp-warm-600),2px 2px 0 var(--gp-warm-600),3px 3px 0 var(--gp-warm-600),4px 4px 0 var(--gp-warm-600),5px 5px 0 var(--gp-warm-600),6px 6px 0 var(--gp-warm-600),7px 7px 0 var(--gp-warm-600),8px 8px 0 var(--gp-warm-600); /* [확정 10/19] 8px */
   --gp-shadow-pop-strong:1px 1px 0 var(--gp-warm-600),2px 2px 0 var(--gp-warm-600),3px 3px 0 var(--gp-warm-600),4px 4px 0 var(--gp-warm-600),5px 5px 0 var(--gp-warm-600),6px 6px 0 var(--gp-warm-600),7px 7px 0 var(--gp-warm-600),8px 8px 0 var(--gp-warm-600),9px 9px 0 var(--gp-warm-600),10px 10px 0 var(--gp-warm-600),11px 11px 0 var(--gp-warm-600); /* [확정 10/19] 강조 카드 11px */
 }
