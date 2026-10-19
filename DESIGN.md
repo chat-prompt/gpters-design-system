@@ -47,7 +47,7 @@ AI를 함께 공부하고 성장하는 사람들이 모인 커뮤니티. 4주 AI
 ## 3. 글자
 | 역할 | 폰트 |
 |---|---|
-| 한글 제목 | **페이퍼로지(Paperlogy)** ExtraBold(800) 기본, 배너 헤드카피는 Black(900) |
+| 한글 제목 | **페이퍼로지(Paperlogy)** ExtraBold(800) 기본, 배너 헤드카피는 Black(900), 정보형 썸네일 제목은 Bold(700)(3-1) |
 | 한글 본문·라벨 | **SUIT** |
 | 영문·숫자 강조 | **Clash Grotesk** 600 |
 - 폰트 파일: 이 저장소 `assets/fonts/`(페이퍼로지·SUIT, 둘 다 OFL). Clash Grotesk는 fontshare.com.
