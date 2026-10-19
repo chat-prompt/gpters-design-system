@@ -1,39 +1,52 @@
-/* GPTers 배너 부품(컴포넌트) v1 — 2026-09-30, 지인 제작 뉴스레터 배너 2장을 재서 만듦
-   모든 크기는 배너 높이 --H 기준 비율. 사용: <div class="gb" style="--H:650px;--W:1080px"> ... </div>
-   폰트는 이 맥에 설치된 Paperlogy / SUIT (install-fonts.sh). 외곽선은 요청 시에만 .gb-stroke 추가. */
-.gb{position:relative;width:var(--W);height:var(--H);overflow:hidden;font-family:'SUIT',sans-serif;color:#1A1A1A}
+/* GPTers 배너 부품(컴포넌트) v2 — 2026-10-19
+   모든 크기는 배너 가로 --W 기준 비율(폰은 가로폭에 맞춰 줄이므로 가로 비율이 실제 보이는 크기를 정한다).
+   사용: <div class="gb" style="--W:1080px;--H:650px"> ... </div>
+   굵기: 300·500·700만(900은 필요할 때만). 페이퍼로지 제목 700, SUIT는 한 단계 올려 쓴다.
+   간격은 두 가지만: 좁게 = 헤드 크기의 0.25배, 넓게 = 0.5배. 근소한 차이는 만들지 않는다. */
+.gb{--head:calc(var(--W)*0.09);--small:calc(var(--W)*0.037);--pad:calc(var(--W)*0.06);
+  position:relative;width:var(--W);height:var(--H);overflow:hidden;font-family:'SUIT',sans-serif;color:#1A1A1A}
 .gb--dark{color:#FFFFFF}
 .gb-art{position:absolute;inset:0;background-size:cover;background-position:center}
-/* 글자 덩어리: 왼쪽 5%W, 위 17%H에서 시작, 폭 최대 50%W */
-.gb-text{position:absolute;left:calc(var(--W)*0.05);top:calc(var(--H)*0.17);max-width:calc(var(--W)*0.50)}
-/* 라벨(밝은 배너에서 잰 값). 칩형·CTA 버튼·날짜 배지는 판매 배너를 재서 다시 넣는다(9/30 눈대중 값은 뺐다) */
-.gb-label{font-family:'SUIT';font-weight:700;font-size:calc(var(--H)*0.062);line-height:1;letter-spacing:-0.01em;margin-bottom:calc(var(--H)*0.038)}
-/* 헤드카피: 페이퍼로지 ExtraBold, 뜻 단위 두 줄, 줄 간격 붙임 */
-.gb-head{font-family:'Paperlogy';font-weight:700;font-size:calc(var(--H)*0.17);line-height:1.08;letter-spacing:-0.02em;white-space:nowrap}
-.gb-head--m{font-size:calc(var(--H)*0.145)}   /* 문구가 길 때(어두운 배너 크기) */
+
+/* 글자 덩어리: 왼쪽 여백 6%W, 세로 가운데(위아래 여백이 같게). 폭은 52%W까지(오른쪽 약 40%W는 그림 자리) */
+.gb-text{position:absolute;left:var(--pad);top:50%;transform:translateY(-50%);max-width:calc(var(--W)*0.52)}
+.gb-text--top{top:var(--pad);transform:none}
+.gb-text--middle{top:50%;transform:translateY(-50%)}
+.gb-text--top-center{left:50%;transform:translateX(-50%);top:var(--pad);max-width:calc(var(--W)*0.88);text-align:center}
+.gb-text--bottom-center{left:50%;transform:translateX(-50%);top:auto;bottom:var(--pad);max-width:calc(var(--W)*0.88);text-align:center}
+
+/* 라벨: SUIT 700, 3.7%W. 헤드와 좁은 간격 */
+.gb-label{font-family:'SUIT';font-weight:700;font-size:var(--small);line-height:1.2;letter-spacing:-0.01em;margin-bottom:calc(var(--head)*0.25)}
+/* 헤드카피: 페이퍼로지 700, 9%W, 뜻 단위 두 줄. 굵은 제목은 글자 앞 여백만큼 당겨 라벨·서브카피와 실제 글자 시작선을 맞춘다(실측) */
+.gb-head{font-family:'Paperlogy';font-weight:700;font-size:var(--head);line-height:1.15;letter-spacing:-0.02em;white-space:nowrap;margin-left:-0.04em}
+.gb-head--m{font-size:calc(var(--W)*0.075)}   /* 문구가 길 때 */
+.gb-head .gb-light{font-weight:500}            /* 한 제목 안에서 덜 강조할 줄 */
 .gb-accent{color:#EB5A10}
 .gb--dark .gb-accent{color:#FF7A1A}
-/* 서브카피: SUIT 500~600, 두 줄 */
-.gb-sub{font-family:'SUIT';font-weight:500;font-size:calc(var(--H)*0.057);line-height:1.25;letter-spacing:-0.01em;margin-top:calc(var(--H)*0.035)}
+/* 서브카피: SUIT 500(눈으로는 페이퍼로지 300 두께), 라벨과 같은 3.7%W. 헤드와 좁은 간격 */
+.gb-sub{font-family:'SUIT';font-weight:500;font-size:var(--small);line-height:1.35;letter-spacing:-0.01em;margin-top:calc(var(--head)*0.25)}
+.gb--dark .gb-sub{color:rgba(255,255,255,.86)}
+
+/* 버튼: 한 장에 주 버튼 하나. 흰 바탕은 주황 면, 주황·어두운 바탕은 흰 면 + 주황 글자. 헤드와 넓은 간격.
+   돌출 그림자는 바탕색을 진하게 한 색으로 1px씩 쌓는다(모서리 틈 방지). 보조는 .gb-link(밑줄 링크) */
+.gb-cta{display:inline-flex;align-items:center;gap:.35em;margin-top:calc(var(--head)*0.5);font-family:'SUIT';font-weight:700;font-size:var(--small);line-height:1;letter-spacing:-0.02em;
+  padding:.55em .9em;border-radius:.35em;background:#EB5A10;color:#fff;
+  box-shadow:1px 1px 0 #B83D00,2px 2px 0 #B83D00,3px 3px 0 #B83D00,4px 4px 0 #B83D00,5px 5px 0 #B83D00}
+.gb--dark .gb-cta,.gb--orange .gb-cta{background:#fff;color:#D34600;box-shadow:1px 1px 0 #9E3300,2px 2px 0 #9E3300,3px 3px 0 #9E3300,4px 4px 0 #9E3300,5px 5px 0 #9E3300}
+.gb-cta svg{width:.72em;height:.72em}
+.gb-actions{display:flex;align-items:center;gap:.8em;margin-top:calc(var(--head)*0.5);white-space:nowrap;font-size:var(--small)}
+.gb-actions .gb-cta{margin-top:0}
+.gb-actions .gb-link{margin:0}
+.gb-link{display:inline-block;margin:calc(var(--head)*0.5) 0 0 .8em;font-family:'SUIT';font-weight:700;font-size:var(--small);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em;color:inherit}
+.gb--orange{background:#EB5A10;color:#fff}
+
 /* 외곽선: 요청 시에만 */
-.gb-stroke{-webkit-text-stroke:calc(var(--H)*0.006) #FFFFFF;paint-order:stroke fill}
-/* 로고: 넣기로 했을 때만, 우하단 55% */
-.gb-logo{position:absolute;right:calc(var(--W)*0.056);bottom:calc(var(--W)*0.056);width:calc(var(--W)*0.11);opacity:.55}
-/* 10/1 지인: "텍스트가 적을 때는 타이틀을 좌상단에, 나머지는 그림이 채우게", "왼쪽이 너무 비어 보인다"
-   그림(.gb-art)은 늘 캔버스 전체에 장면째 깐다. 글자 쪽을 단색 판으로 자르지 않는다.
-   글자 대비는 그림 위에 .gb-scrim(그라데이션)을 얹어 맞춘다. */
-.gb-text--top{top:calc(var(--H)*0.09)}
-.gb-text--top .gb-head{font-size:calc(var(--H)*0.20)}            /* 헤드카피만 있을 때: 좌상단 */
+.gb-stroke{-webkit-text-stroke:calc(var(--W)*0.004) #FFFFFF;paint-order:stroke fill}
+/* 로고: 넣기로 했을 때만. 여백과 같은 6%W 모서리, 폭 11%W. 판매·모집 배너는 주황 55%(어두운 바탕은 흰색), 정보형은 회색 단색 */
+.gb-logo{position:absolute;right:var(--pad);bottom:var(--pad);width:calc(var(--W)*0.11);opacity:.55}
+
+/* 글자 대비: 그림은 늘 캔버스 전체에 장면째 깔고, 글자 쪽에 그라데이션을 얹는다(단색 판으로 자르지 않는다) */
 .gb-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(21,20,19,.72) 0%,rgba(21,20,19,.38) 34%,rgba(21,20,19,0) 56%)}
 .gb-scrim--light{background:linear-gradient(100deg,rgba(250,248,246,.86) 0%,rgba(250,248,246,.45) 34%,rgba(250,248,246,0) 56%)}
-/* 10/1 지인: 헤드카피만일 때 가운데 한 줄도 허용(상단 중앙·하단 중앙). 그림은 그대로 캔버스 전체 */
-.gb-text--top-center{left:50%;transform:translateX(-50%);top:calc(var(--H)*0.07);max-width:calc(var(--W)*0.9);text-align:center}
-.gb-text--bottom-center{left:50%;transform:translateX(-50%);top:auto;bottom:calc(var(--H)*0.08);max-width:calc(var(--W)*0.9);text-align:center}
 .gb-scrim--top{background:linear-gradient(180deg,rgba(21,20,19,.7) 0%,rgba(21,20,19,0) 38%)}
 .gb-scrim--bottom{background:linear-gradient(0deg,rgba(21,20,19,.7) 0%,rgba(21,20,19,0) 40%)}
-
-/* 제목 글자의 실제 시작선에 라벨·서브카피를 시각적으로 맞춘다. */
-.gb-label,.gb-sub{margin-left:calc(var(--W)*0.007)}
-
-/* 라벨·서브카피 없는 두 줄 제목: 위아래 여백 균형 */
-.gb-text--middle{top:50%;transform:translateY(-50%)}
