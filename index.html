@@ -388,22 +388,22 @@
   <h2>배너 키트 <span class="tag">v2 · 10/19</span></h2>
   <p class="desc">모든 크기는 배너 <b>가로 대비 비율</b>이에요. 폰은 이미지를 가로폭에 맞춰 줄이니까 가로 비율이 실제로 보이는 크기를 정해요. 파일: <code>assets/kit/banner-kit.css</code></p>
   <div class="grid g3">
-    <figure><img src="assets/examples/banner-label-head-sub.png" alt="라벨, 두 줄 헤드카피, 서브카피 배너" loading="lazy"><figcaption>라벨 + 헤드 + 서브카피 · 글자가 그림에 닿으면 그림을 오른쪽으로</figcaption></figure>
+    <figure><img src="assets/examples/banner-label-head-sub.png" alt="라벨, 두 줄 헤드카피, 서브카피 배너" loading="lazy"><figcaption>라벨 알약 + 헤드 + 서브카피 한 줄 · 그림은 최종 비율로, 왼쪽은 비워 그리기</figcaption></figure>
     <figure><img src="assets/examples/banner-head-only.png" alt="헤드카피만 있는 어두운 배너" loading="lazy"><figcaption>헤드카피만 · 첫 줄 500, 둘째 줄 700 · 세로 가운데</figcaption></figure>
-    <figure><img src="assets/examples/banner-webinar-cta.png" alt="무료 웨비나 신청 주황 배너, 흰 버튼과 밑줄 링크" loading="lazy"><figcaption>주황 바탕 · 흰 주 버튼 + 밑줄 보조 링크(<code>.gb-actions</code>로 한 줄)</figcaption></figure>
+    <figure><img src="assets/examples/banner-webinar-cta.png" alt="무료 웨비나 신청 주황 배너, 흰 버튼과 밑줄 링크" loading="lazy"><figcaption>무료 웨비나 · 라벨에 LIVE와 시간, 흰 주 버튼 + 밑줄 링크</figcaption></figure>
   </div>
   <div class="tbl" style="margin-top:16px"><table>
     <tr><th>부품</th><th>클래스</th><th>글꼴 · 굵기</th><th>가로 대비 (1080 기준)</th></tr>
     <tr><td>여백</td><td><code>.gb</code> <code>--pad</code></td><td></td><td>6%W (65px) · 왼쪽·위아래·로고 모서리 모두 같게</td></tr>
-    <tr><td>헤드카피</td><td><code>.gb-head</code> <code>.gb-accent</code> <code>.gb-light</code></td><td>Paperlogy 700 (덜 강조할 줄 500)</td><td>9%W (97px) · 길면 <code>.gb-head--m</code> 7.5%W</td></tr>
-    <tr><td>라벨</td><td><code>.gb-label</code></td><td>SUIT 700</td><td>3.7%W (40px) · 헤드와 0.25배 간격</td></tr>
-    <tr><td>서브카피</td><td><code>.gb-sub</code></td><td>SUIT 500</td><td>3.7%W (40px) · 헤드와 0.25배 간격</td></tr>
-    <tr><td>버튼 · 링크</td><td><code>.gb-actions</code> <code>.gb-cta</code> <code>.gb-link</code></td><td>SUIT 700</td><td>3.7%W · 위와 0.5배 간격</td></tr>
+    <tr><td>라벨</td><td><code>.gb-label</code> <code>.live</code></td><td>SUIT 700 · 알약</td><td>3.3%W (36px, 하한) · 라이브는 빨간 점</td></tr>
+    <tr><td>헤드카피</td><td><code>.gb-head</code> <code>.gb-accent</code> <code>.gb-light</code></td><td>Paperlogy 700 (덜 강조할 줄 500)</td><td>10.5%W (113px) · 그림 없으면 <code>.gb--wide</code> 11%W · 라벨과 0.3배 간격</td></tr>
+    <tr><td>서브카피</td><td><code>.gb-sub</code></td><td>SUIT 500</td><td>4.6%W (50px) · 헤드와 0.3배 간격 · 한 줄</td></tr>
+    <tr><td>버튼 · 링크</td><td><code>.gb-actions</code> <code>.gb-cta</code> <code>.gb-link</code></td><td>SUIT 700</td><td>4.6%W · 위와 0.5배 간격</td></tr>
     <tr><td>글자 위치</td><td><code>.gb-text</code> (<code>--top</code> <code>--top-center</code> <code>--bottom-center</code>)</td><td></td><td>세로 가운데 기본 · 글자 영역 52%W까지</td></tr>
     <tr><td>글자 뒤 대비</td><td><code>.gb-scrim</code> <code>--light</code> <code>--top</code> <code>--bottom</code></td><td></td><td>글자 쪽에서 옅어지는 그라데이션</td></tr>
   </table></div>
   <div class="grid g2" style="margin-top:16px">
-    <div class="do"><b>DO</b><ul><li>크기는 9%W와 3.7%W 두 단계, 간격은 0.25배와 0.5배 두 가지만</li><li>라벨·헤드·서브카피의 실제 글자 시작선을 재서 한 선에 맞추기</li><li>글자 덩어리는 세로 가운데, 위아래 여백 같게</li><li>그림은 캔버스 전체에 장면째, 캐릭터는 카피 쪽을 보게</li><li>글자가 그림에 닿으면 그림을 옮기기</li></ul></div>
+    <div class="do"><b>DO</b><ul><li>크기는 10.5 → 4.6 → 3.3%W 세 단계, 간격은 실제 글자 기준 0.3배와 0.5배 두 가지만</li><li>날짜·시간·라이브는 라벨 알약으로 올리고, 넘치면 서브를 빼기</li><li>라벨·헤드·서브카피의 실제 글자 시작선을 재서 한 선에 맞추기</li><li>글자 덩어리는 세로 가운데, 위아래 여백 같게</li><li>그림은 캔버스 전체에 장면째, 캐릭터는 카피 쪽을 보게</li><li>글자가 그림에 닿으면 그림을 옮기기</li></ul></div>
     <div class="dont"><b>DON'T</b><ul><li>라벨 5%·서브 5.7%처럼 애매하게 다른 값</li><li>글자를 줄여서 억지로 끼우기</li><li>왼쪽을 단색 판으로 비우고 그림을 오른쪽 절반에만</li><li>주황 바탕에 먹색 버튼, 보조 버튼 두 개</li><li>한 단어만 한 줄에 남기는 줄바꿈</li></ul></div>
   </div>
 </section>
