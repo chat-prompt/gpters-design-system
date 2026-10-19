@@ -39,7 +39,7 @@
    주황 바탕 위에서는 먹색 버튼 */
 .gs-cta{position:absolute;display:inline-flex;align-items:center;justify-content:center;gap:.35em;font-family:'SUIT';font-weight:700;line-height:1;letter-spacing:-0.02em;color:#fff;background:#EB5A10;border-radius:8px;box-shadow:0 .1em 0 #B83D00;white-space:nowrap}
 .gs-cta--small{background:#D34600;box-shadow:0 2px 0 #A83600}
-.gs-cta--ink{background:#151413;box-shadow:0 .1em 0 #000}
+.gs-cta--ink{background:#fff;color:#D34600;box-shadow:0 .1em 0 #9E3300}
 .gs-cta--pill{border-radius:999px}
 /* 하단 주황 띠 CTA (판매 카드뉴스 방식) */
 .gs-strip{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:.3em;background:#EB5A10;color:#fff;font-family:'Paperlogy';font-weight:900;letter-spacing:-0.02em}
