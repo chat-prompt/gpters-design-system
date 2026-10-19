@@ -1,0 +1,49 @@
+/* GPTers 디자인 토큰 v2 초안 (2026-10-19)
+   표시: [실측] 기존 작업물에서 잰 값 / [추정] 새로 정한 값, 검토 중 */
+:root{
+  /* 브랜드 */
+  --gp-orange:#EB5A10;          /* [실측] 큰 글자·아이콘·버튼 면 */
+  --gp-orange-strong:#D34600;   /* [실측] 흰 바탕 작은 주황 글자, hover */
+  --gp-orange-deep:#B83D00;     /* [실측] 버튼 아래 돌출 그림자 */
+  --gp-orange-tint:#FEF2EC;     /* [실측] 강조 면 */
+  --gp-yellow:#FFE14D;          /* [실측] 주황 바탕 위 포인트 하나 */
+
+  /* 따뜻한 회색: 노란기(카키) 없이 분홍기 도는 방향 (10/19 지인 선택 "다-2") */
+  --gp-warm-50:#FAF8F6;         /* [실측] 바탕 cream */
+  --gp-warm-100:#F3EEEC;        /* [추정] 중립 면 */
+  --gp-warm-200:#E6DDDA;        /* [추정] 옅은 구분선 */
+  --gp-warm-300:#D3C6C2;        /* [추정] 입력창 테두리, 점선 */
+  --gp-warm-400:#B5A6A1;        /* [추정] 비활성 글자, 아이콘 선 */
+  --gp-warm-500:#93817B;        /* [추정] 보조 숫자 */
+  --gp-warm-600:#83716B;        /* [확정] 카드 테두리·그림자 (다-2) */
+  --gp-warm-700:#6A5A55;        /* [추정] 서브카피·캡션 (흰 바탕 대비 6.6) */
+  --gp-warm-800:#4A3F3B;        /* [추정] 본문 진한 */
+  --gp-ink:#1A1A1A;             /* [실측] 제목·본문 */
+  --gp-dark:#151413;            /* [실측] 어두운 바탕 */
+  --gp-white:#FFFFFF;
+
+  /* 상태색 [추정] 주황과 겹치지 않게 */
+  --gp-success:#1F8A4C; --gp-warning:#C98A00; --gp-error:#D92D20; --gp-info:#2F6FEB;
+
+  /* 글자 크기 (웹) [추정] */
+  --gp-text-xs:12px; --gp-text-sm:14px; --gp-text-base:16px; --gp-text-lg:18px;
+  --gp-text-xl:20px; --gp-text-2xl:24px; --gp-text-3xl:32px; --gp-text-4xl:40px; --gp-text-5xl:56px;
+
+  /* 간격 8px 단위 [실측] */
+  --gp-space-1:4px; --gp-space-2:8px; --gp-space-3:16px; --gp-space-4:24px;
+  --gp-space-5:32px; --gp-space-6:48px; --gp-space-7:64px; --gp-space-8:80px;
+
+  /* 모서리 [실측] */
+  --gp-radius-sm:8px; --gp-radius-md:12px; --gp-radius-lg:16px; --gp-radius-xl:20px; --gp-radius-pill:999px;
+
+  /* 테두리 [확정 10/19] 두께는 얇게, 색은 진하게 */
+  --gp-border:2.5px solid var(--gp-warm-600);   /* 1200px 너비 기준, 카드 폭의 약 1% */
+  --gp-border-on-orange:2.5px solid var(--gp-orange-deep);
+
+  /* 그림자: 갈색 기운의 옅은 그림자 [추정] */
+  --gp-shadow-sm:0 1px 2px rgba(74,52,32,.06),0 2px 6px rgba(74,52,32,.06);
+  --gp-shadow-md:0 2px 4px rgba(74,52,32,.06),0 8px 20px rgba(74,52,32,.10);
+  --gp-shadow-lg:0 4px 8px rgba(74,52,32,.06),0 18px 40px rgba(74,52,32,.14);
+  --gp-shadow-pop:5px 5px 0 var(--gp-warm-600);          /* [확정 10/19] 오른쪽 아래로 딱 떨어지는 그림자, 테두리와 같은 색 */
+  --gp-shadow-pop-orange:5px 5px 0 var(--gp-orange-deep); /* [확정 10/19] 주황 카드용 */
+}
