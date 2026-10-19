@@ -11,13 +11,12 @@
 <link rel="stylesheet" href="assets/kit/banner-kit.css" />
 <link rel="stylesheet" href="assets/kit/banner-slots.css" />
 <style>
+  @font-face{font-family:'Paperlogy';font-weight:300;font-display:swap;src:url(assets/fonts/Paperlogy-3Light.ttf) format('truetype')}
+  @font-face{font-family:'SUIT';font-weight:300;font-display:swap;src:url(assets/fonts/SUIT-Light.otf) format('opentype')}
   @font-face{font-family:'Paperlogy';font-weight:500;font-display:swap;src:url(assets/fonts/Paperlogy-5Medium.ttf) format('truetype')}
-  @font-face{font-family:'Paperlogy';font-weight:600;font-display:swap;src:url(assets/fonts/Paperlogy-6SemiBold.ttf) format('truetype')}
   @font-face{font-family:'Paperlogy';font-weight:700;font-display:swap;src:url(assets/fonts/Paperlogy-7Bold.ttf) format('truetype')}
-  @font-face{font-family:'Paperlogy';font-weight:800;font-display:swap;src:url(assets/fonts/Paperlogy-8ExtraBold.ttf) format('truetype')}
   @font-face{font-family:'Paperlogy';font-weight:900;font-display:swap;src:url(assets/fonts/Paperlogy-9Black.ttf) format('truetype')}
   @font-face{font-family:'SUIT';font-weight:500;font-display:swap;src:url(assets/fonts/SUIT-Medium.woff2) format('woff2')}
-  @font-face{font-family:'SUIT';font-weight:600;font-display:swap;src:url(assets/fonts/SUIT-SemiBold.woff2) format('woff2')}
   @font-face{font-family:'SUIT';font-weight:700;font-display:swap;src:url(assets/fonts/SUIT-Bold.woff2) format('woff2')}
 
   :root{
@@ -27,15 +26,15 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;scroll-padding-top:24px}
-  body{font-family:'SUIT',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:-0.01em}
+  body{font-family:'SUIT',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;background:var(--bg);color:var(--ink);font-weight:500;line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:-0.01em}
   a{color:inherit}
-  code{font-family:ui-monospace,Menlo,monospace;font-size:.86em;background:#F1EEEA;padding:.1em .4em;border-radius:6px}
+  code{font-weight:500;font-family:ui-monospace,Menlo,monospace;font-size:.86em;background:#F1EEEA;padding:.1em .4em;border-radius:6px}
 
   /* layout */
   .side{position:fixed;inset:0 auto 0 0;width:var(--side);padding:28px 20px;border-right:1px solid var(--line);background:var(--bg);overflow-y:auto}
   .brand{display:flex;align-items:center;gap:10px;margin-bottom:28px;text-decoration:none}
   .brand img{width:30px;height:30px}
-  .brand b{font-family:'Clash Grotesk',sans-serif;font-weight:600;font-size:19px;letter-spacing:0}
+  .brand b{font-family:'Clash Grotesk',sans-serif;font-weight:500;font-size:19px;letter-spacing:0}
   .brand span{font-size:12px;color:var(--muted);display:block;line-height:1.2}
   .nav-group{margin-bottom:18px}
   .nav-group p{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px 10px}
@@ -45,10 +44,10 @@
   main{margin-left:var(--side);padding:40px 48px 120px;max-width:calc(var(--side) + 1040px)}
   section{padding-top:56px}
   section:first-of-type{padding-top:0}
-  .eyebrow{font-family:'Clash Grotesk',sans-serif;font-weight:600;color:var(--orange);font-size:14px;letter-spacing:.02em;margin-bottom:8px}
+  .eyebrow{font-family:'Clash Grotesk',sans-serif;font-weight:500;color:var(--orange);font-size:14px;letter-spacing:.02em;margin-bottom:8px}
   h1{font-family:'Paperlogy';font-weight:900;font-size:clamp(34px,4.4vw,52px);line-height:1.08;letter-spacing:-0.03em}
   h1 em{font-style:normal;color:var(--orange)}
-  h2{font-family:'Paperlogy';font-weight:800;font-size:32px;letter-spacing:-0.02em;line-height:1.2;margin-bottom:10px}
+  h2{font-family:'Paperlogy';font-weight:700;font-size:32px;letter-spacing:-0.02em;line-height:1.2;margin-bottom:10px}
   h3{font-family:'SUIT';font-weight:700;font-size:19px;margin:28px 0 10px}
   .lead{font-size:18px;line-height:1.65;color:#3a3a3a;max-width:640px}
   body,p,h1,h2,h3,li,td{word-break:keep-all;overflow-wrap:break-word}
@@ -78,7 +77,7 @@
   .hero-intro b{color:var(--ink)}
   .ai-card{margin-top:22px;position:relative;z-index:1;border-radius:18px;padding:22px 24px;width:fit-content;max-width:600px;background:var(--dark);color:#fff;overflow:hidden}
   .ai-card::before{content:"";position:absolute;right:-90px;top:-90px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,#EB5A10 0%,rgba(235,90,16,0) 70%);opacity:.55}
-  .ai-card .pill{display:inline-block;font-family:'Clash Grotesk',sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;padding:4px 10px;border-radius:999px;background:#EB5A10;color:#fff}
+  .ai-card .pill{display:inline-block;font-family:'Clash Grotesk',sans-serif;font-weight:500;font-size:13px;letter-spacing:.04em;padding:4px 10px;border-radius:999px;background:#EB5A10;color:#fff}
   .ai-card h3{position:relative;margin:10px 0 6px;font-family:'Paperlogy';font-weight:900;font-size:clamp(22px,2.4vw,27px);line-height:1.2;letter-spacing:-0.02em}
   .ai-card h3 em{font-style:normal;color:#FF8A3D}
   .ai-card p{position:relative;font-size:15px;line-height:1.6;color:#D9D4CF;max-width:560px}
@@ -91,7 +90,7 @@
   @media (max-width:640px){.ai-card{padding:22px 18px}.ai-actions a,.ai-actions button{width:100%;justify-content:center}}
 
   .kw{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-  .kw span{font-family:'Paperlogy';font-weight:800;font-size:18px;padding:10px 16px;border-radius:999px;background:var(--panel);border:1px solid var(--line)}
+  .kw span{font-family:'Paperlogy';font-weight:700;font-size:18px;padding:10px 16px;border-radius:999px;background:var(--panel);border:1px solid var(--line)}
   .kw span:nth-child(3n+1){background:var(--dark);color:#fff;border-color:var(--dark)}
   .kw span:nth-child(4n+2){background:var(--orange);color:#fff;border-color:var(--orange)}
 
@@ -99,7 +98,7 @@
   .logo-tile{border-radius:14px;height:150px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
   .logo-tile img{max-width:62%;max-height:44%}
   .dl{display:flex;gap:8px;margin-top:10px;font-size:13px}
-  .dl a{padding:5px 10px;border-radius:8px;background:#F1EEEA;text-decoration:none;font-weight:600}
+  .dl a{padding:5px 10px;border-radius:8px;background:#F1EEEA;text-decoration:none;font-weight:500}
   .dl a:hover{background:var(--tint);color:var(--orange-strong)}
 
   /* color */
@@ -210,11 +209,11 @@
   <div class="grid g2" style="margin-top:16px">
     <div class="card" style="background:var(--dark);color:#fff;border-color:var(--dark)"><span class="tag">마케팅 디자인 원칙</span>
       <h3 style="margin:10px 0 6px;font-family:'Paperlogy';font-weight:900;font-size:26px">강렬하게</h3>
-      <p style="margin:0 0 8px;font-weight:800;font-size:15px;color:#FFB37D">기준: 바깥으로 내보내 멈추게 하는 것</p>
+      <p style="margin:0 0 8px;font-weight:700;font-size:15px;color:#FFB37D">기준: 바깥으로 내보내 멈추게 하는 것</p>
       <p style="color:#d9d4cf;font-size:14px">판매·모집·할인·마감 배너, 광고, SNS 카드뉴스, 이벤트 썸네일, 뉴스레터 배너, 소개·제안 자료. 멈추게 하고 바로 누르게. 취향 키워드를 전부 써요: 3D 기울임 제목, 불꽃·속도선, % 배지·리본·CTA 버튼, 장면 안에서 크게 연기하는 캐릭터.</p></div>
     <div class="card"><span class="tag gray">프로덕트 디자인 원칙</span>
-      <h3 style="margin:10px 0 6px;font-family:'Paperlogy';font-weight:800;font-size:26px">정제하되 트렌디하게</h3>
-      <p style="margin:0 0 8px;font-weight:800;font-size:15px;color:#C2410C">기준: 사람이 들어와 쓰는 화면</p>
+      <h3 style="margin:10px 0 6px;font-family:'Paperlogy';font-weight:700;font-size:26px">정제하되 트렌디하게</h3>
+      <p style="margin:0 0 8px;font-weight:700;font-size:15px;color:#C2410C">기준: 사람이 들어와 쓰는 화면</p>
       <p class="desc" style="margin:0;font-size:14px">gpters.org 사이트·스터디 페이지·랜딩·LMS처럼 사람이 쓰는 화면. 헷갈리지 않고 다음 행동을 바로 하게, 오래 봐도 질리지 않게. 여백 넉넉히, 주황은 주 버튼·핵심 숫자에만, 크림·먹색 바탕, 그라데이션·그레인은 은은하게, 스트릿 디테일은 한 화면에 하나, 영문은 Clash Grotesk. 문구는 UX 라이팅 원칙을 따라요.</p></div>
   </div>
   <div class="grid g3" style="margin-top:16px">
@@ -276,9 +275,9 @@
   <h2>타이포그래피</h2>
   <p class="desc">제목은 페이퍼로지, 본문은 SUIT, 영문·숫자 강조는 Clash Grotesk. 공식 배포처 파일만 써요.</p>
   <div class="grid" style="gap:14px">
-    <div class="card spec"><div><span class="tag">제목 · 헤드카피</span><div class="big" style="font-family:'Paperlogy';font-weight:700;letter-spacing:-0.02em">이번 주 <span style="color:var(--orange)">AI</span>, 이렇게 쓰기!</div></div><small class="desc" style="margin:0">Paperlogy Bold 700 기본 (800·900은 필요할 때만) · SIL OFL 1.1<br>freesentation.blog/paperlogyfont</small></div>
-    <div class="card spec"><div><span class="tag">본문 · 라벨 · 자막</span><div style="font-family:'SUIT';font-weight:600;font-size:26px">새로운 소식과 직접 써본 활용법을 매주 월요일 보내드려요</div></div><small class="desc" style="margin:0">SUIT 500~700 · SIL OFL 1.1<br>github.com/sun-typeface/SUIT</small></div>
-    <div class="card spec"><div><span class="tag">영문 · 숫자</span><div style="font-family:'Clash Grotesk';font-weight:600;font-size:40px">GPTers AI DROP 026</div></div><small class="desc" style="margin:0">Clash Grotesk 600 · ITF FFL<br>fontshare.com (수정·변환·외부 전달 금지)</small></div>
+    <div class="card spec"><div><span class="tag">제목 · 헤드카피</span><div class="big" style="font-family:'Paperlogy';font-weight:700;letter-spacing:-0.02em">이번 주 <span style="color:var(--orange)">AI</span>, 이렇게 쓰기!</div></div><small class="desc" style="margin:0">Paperlogy Bold 700 기본, 300·500 함께 (900은 필요할 때만, 400·600·800 안 씀) · SIL OFL 1.1<br>freesentation.blog/paperlogyfont</small></div>
+    <div class="card spec"><div><span class="tag">본문 · 라벨 · 자막</span><div style="font-family:'SUIT';font-weight:500;font-size:26px">새로운 소식과 직접 써본 활용법을 매주 월요일 보내드려요</div></div><small class="desc" style="margin:0">SUIT 300·500·700 · SIL OFL 1.1<br>github.com/sun-typeface/SUIT</small></div>
+    <div class="card spec"><div><span class="tag">영문 · 숫자</span><div style="font-family:'Clash Grotesk';font-weight:500;font-size:40px">GPTers AI DROP 026</div></div><small class="desc" style="margin:0">Clash Grotesk 500 · ITF FFL<br>fontshare.com (수정·변환·외부 전달 금지)</small></div>
   </div>
   <h3>크기 (1080 너비 캔버스, 모바일)</h3>
   <div class="tbl"><table>
@@ -287,7 +286,7 @@
     <tr><td>카드뉴스 표지 제목</td><td>80~96px</td><td>Paperlogy 700</td><td>두껍게 뭉치면 한 단계 낮춤</td></tr>
     <tr><td>소제목</td><td>56px 이상</td><td>SUIT 700</td><td></td></tr>
     <tr><td>본문</td><td>48px 이상</td><td>SUIT 500</td><td>줄 간격 1.5~1.6</td></tr>
-    <tr><td>가장 작은 글자</td><td>캔버스 가로의 3.3% 이상 (1080 → 36px, 1200 → 40px)</td><td>SUIT 500~700</td><td>캡션·출처·페이지 번호 포함. 폰은 가로폭에 맞춰 줄이니 세로 길이는 상관없음</td></tr>
+    <tr><td>가장 작은 글자</td><td>캔버스 가로의 3.3% 이상 (1080 → 36px, 1200 → 40px)</td><td>SUIT 500·700</td><td>캡션·출처·페이지 번호 포함. 폰은 가로폭에 맞춰 줄이니 세로 길이는 상관없음</td></tr>
   </table></div>
 </section>
 
@@ -350,7 +349,7 @@
 
 <section id="kit">
   <div class="eyebrow">Components</div>
-  <h2>배너 키트 <span style="display:inline-block;vertical-align:middle;margin-left:8px;padding:4px 12px;border-radius:999px;background:#EB5A10;color:#fff;font-size:14px;font-weight:800;letter-spacing:0">확정 전</span></h2>
+  <h2>배너 키트 <span style="display:inline-block;vertical-align:middle;margin-left:8px;padding:4px 12px;border-radius:999px;background:#EB5A10;color:#fff;font-size:14px;font-weight:700;letter-spacing:0">확정 전</span></h2>
   <div class="card" style="border:2px solid #EB5A10;background:#FFF4EC;margin:12px 0 16px">
     <b style="color:#C2410C">⚠️ 아직 확정된 기준이 아니에요</b>
     <p class="desc" style="margin:6px 0 0">기준작(참고 배너)부터 아직 검토 중이에요. 여기 수치를 정답으로 쓰지 말고, 시안을 만들 때 출발점으로만 써요. 기준작이 확정되면 수치를 다시 재서 바꿔요.</p>
@@ -642,7 +641,7 @@
   </table></div>
   <h3>카드와 그림자</h3>
   <div class="grid g2">
-    <div class="do"><b>DO</b><ul><li>바탕 <code>#F4EFEB</code> 위 흰 카드, 테두리 없이 <code>3px 4px 10px rgba(74,51,44,.40)</code></li><li>강조 카드는 하나만, 주황 면 + <code>4px 6px 14px rgba(74,51,44,.50)</code></li><li>카드 안은 가운데 정렬, 숫자는 이름 옆</li><li>크기는 확실히 벌리고, 근소한 차이는 같게</li><li>굵기는 두 단계씩: 500과 700만</li><li>로고는 회색 단색 우상단, 제목 글자 윗선에 맞추기</li></ul></div>
+    <div class="do"><b>DO</b><ul><li>바탕 <code>#F4EFEB</code> 위 흰 카드, 테두리 없이 <code>3px 4px 10px rgba(74,51,44,.40)</code></li><li>강조 카드는 하나만, 주황 면 + <code>4px 6px 14px rgba(74,51,44,.50)</code></li><li>카드 안은 가운데 정렬, 숫자는 이름 옆</li><li>크기는 확실히 벌리고, 근소한 차이는 같게</li><li>굵기는 두 단계씩: 300·500·700(900은 필요할 때만)</li><li>로고는 회색 단색 우상단, 제목 글자 윗선에 맞추기</li></ul></div>
     <div class="dont"><b>DON'T</b><ul><li>5px 차이, 굵기 한 단계 차이처럼 애매한 값</li><li>숫자를 카드 반대쪽 끝에 떨어뜨리기</li><li>돌출 그림자를 한 장(<code>5px 5px 0</code>)으로: 모서리에 틈</li><li>노란기 도는 베이지 회색(카키처럼 보임)</li><li>가로 하한(3.3%) 아래 글자</li></ul></div>
   </div>
   <p class="desc" style="margin-top:14px">더 강한 톤이 필요하면 테두리 <code>2.5px #4A332C</code> + 1px씩 쌓은 돌출 그림자 8px(강조 11px)를 써요. 한 장 안에서 두 방식을 섞지 않아요.</p>
