@@ -21,6 +21,8 @@
   --gp-ink:#1A1A1A;             /* [실측] 제목·본문 */
   --gp-dark:#151413;            /* [실측] 어두운 바탕 */
   --gp-white:#FFFFFF;
+  --gp-logo-gray:#B9ACA6;       /* [확정 10/19] 정보형 썸네일 로고(단색, 불투명도 아님) */
+  --gp-logo-light-orange:#F2A27A; /* [후보] 연주황 로고 */
 
   /* 상태색 [추정] 주황과 겹치지 않게 */
   --gp-success:#1F8A4C; --gp-warning:#C98A00; --gp-error:#D92D20; --gp-info:#2F6FEB;
@@ -45,6 +47,6 @@
   --gp-shadow-md:0 2px 4px rgba(74,52,32,.06),0 8px 20px rgba(74,52,32,.10);
   --gp-shadow-lg:0 4px 8px rgba(74,52,32,.06),0 18px 40px rgba(74,52,32,.14);
   /* 돌출 그림자: 한 장을 통째로 옮기면 둥근 모서리(오른쪽 위·왼쪽 아래)에서 틈이 생긴다. 1px씩 쌓아 이어 붙인다 [확정 10/19] */
-  --gp-shadow-pop:1px 1px 0 var(--gp-warm-600),2px 2px 0 var(--gp-warm-600),3px 3px 0 var(--gp-warm-600),4px 4px 0 var(--gp-warm-600),5px 5px 0 var(--gp-warm-600);
-  --gp-shadow-pop-strong:1px 1px 0 var(--gp-warm-600),2px 2px 0 var(--gp-warm-600),3px 3px 0 var(--gp-warm-600),4px 4px 0 var(--gp-warm-600),5px 5px 0 var(--gp-warm-600),6px 6px 0 var(--gp-warm-600),7px 7px 0 var(--gp-warm-600); /* 강조 카드, 같은 색으로 한 단계 깊게 */
+  --gp-shadow-pop:1px 1px 0 var(--gp-warm-600),2px 2px 0 var(--gp-warm-600),3px 3px 0 var(--gp-warm-600),4px 4px 0 var(--gp-warm-600),5px 5px 0 var(--gp-warm-600),6px 6px 0 var(--gp-warm-600),7px 7px 0 var(--gp-warm-600),8px 8px 0 var(--gp-warm-600); /* [확정 10/19] 8px */
+  --gp-shadow-pop-strong:1px 1px 0 var(--gp-warm-600),2px 2px 0 var(--gp-warm-600),3px 3px 0 var(--gp-warm-600),4px 4px 0 var(--gp-warm-600),5px 5px 0 var(--gp-warm-600),6px 6px 0 var(--gp-warm-600),7px 7px 0 var(--gp-warm-600),8px 8px 0 var(--gp-warm-600),9px 9px 0 var(--gp-warm-600),10px 10px 0 var(--gp-warm-600),11px 11px 0 var(--gp-warm-600); /* [확정 10/19] 강조 카드 11px */
 }
