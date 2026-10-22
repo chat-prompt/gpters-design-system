@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:SUIT;font-weight:400;src:url(../fonts/SUIT-Regular.woff2)}
+@font-face{font-family:SUIT;font-weight:600;src:url(../fonts/SUIT-SemiBold.woff2)}
+@font-face{font-family:SUIT;font-weight:800;src:url(../fonts/SUIT-ExtraBold.woff2)}
+@font-face{font-family:Paperlogy;font-weight:700;src:url(../fonts/Paperlogy-7Bold.ttf)}
+*{box-sizing:border-box}body{margin:0;background:#F4EFEB;color:#1A1A1A;font-family:SUIT}
+/* 버튼 부품: 배너 키트 .gb-cta·.gb-link와 같은 값 */
+.btn{display:inline-flex;align-items:center;gap:.35em;font:800 1em/1 SUIT;letter-spacing:-.02em;padding:.6em .95em;border-radius:.35em;background:#EB5A10;color:#fff;white-space:nowrap}
+.pop{box-shadow:1px 1px 0 #B83D00,2px 2px 0 #B83D00,3px 3px 0 #B83D00,4px 4px 0 #B83D00,5px 5px 0 #B83D00,6px 6px 0 #B83D00,7px 7px 0 #B83D00,8px 8px 0 #B83D00}
+.soft{box-shadow:3px 4px 10px rgba(74,51,44,.40)}
+.on .btn{background:#fff;color:#D34600}
+.on .pop{box-shadow:1px 1px 0 #9E3300,2px 2px 0 #9E3300,3px 3px 0 #9E3300,4px 4px 0 #9E3300,5px 5px 0 #9E3300,6px 6px 0 #9E3300,7px 7px 0 #9E3300,8px 8px 0 #9E3300}
+.on .soft{box-shadow:3px 4px 10px rgba(110,36,0,.45)}
+.lnk{font:800 1em/1 SUIT;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em;color:inherit;white-space:nowrap}
+.btn svg{width:.72em;height:.72em;flex:none}
+.row{display:flex;align-items:center;justify-content:center;gap:.8em}
+.p{background:#fff;border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.p.on{background:#EB5A10;color:#fff}
+.p em{font:600 1em/1.2 SUIT;font-style:normal;color:#5E4E49}
+.p.on em{color:#FFE7DA}
+/* 가로형: 버튼 모음 1200 */
+#buttons{width:1200px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+#buttons .p{height:186px;gap:26px;font-size:20px}
+#buttons .row{font-size:32px}
+/* 세로형 1080×1350: 버튼 아이콘 */
+.v{width:1080px;height:1350px;padding:65px;display:flex;flex-direction:column;position:relative}
+.hd{display:flex;justify-content:space-between;align-items:flex-start}
+.lg{width:135px;flex:none;margin-top:12px}
+h1{margin:0;font:700 72px/1.2 Paperlogy;letter-spacing:-.02em}
+.sub{margin-top:4px;font:400 36px/1.3 SUIT;color:#5E4E49;letter-spacing:-.01em}
+#icons .g{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:28px;margin-top:52px}
+#icons .p{gap:34px;font-size:36px}
+#icons .row{font-size:44px}
+#icons .row.two{font-size:40px;gap:.6em}
+.tag{font:800 36px/1 SUIT;padding:10px 24px;border-radius:999px;background:#4A332C;color:#fff}
+.on .tag{background:#fff;color:#D34600}
+</style></head><body>
+<div id="buttons">
+  <div class="p"><em>흰 바탕, 돌출 그림자</em><div class="row"><span class="btn pop">신청하기</span></div></div>
+  <div class="p on"><em>주황 바탕, 돌출 그림자</em><div class="row"><span class="btn pop">신청하기</span></div></div>
+  <div class="p"><em>흰 바탕, 연한 그림자</em><div class="row"><span class="btn soft">신청하기</span></div></div>
+  <div class="p on"><em>주황 바탕, 연한 그림자</em><div class="row"><span class="btn soft">신청하기</span></div></div>
+  <div class="p"><em>흰 바탕, 주 버튼과 보조 링크(먹색)</em><div class="row"><span class="btn pop">신청하기</span><span class="lnk">일정 보기</span></div></div>
+  <div class="p on"><em>주황 바탕, 주 버튼과 보조 링크(흰색)</em><div class="row"><span class="btn pop">신청하기</span><span class="lnk">일정 보기</span></div></div>
+</div>
+<div class="v" id="icons">
+  <div class="hd"><h1>버튼 아이콘</h1><img class="lg" src="../logo/wordmark-gray-warm.svg"></div>
+  <div class="sub">버튼 하나면 꺾쇠, 링크와 같이 있으면 없음</div>
+  <div class="g">
+    <div class="p"><span class="tag">버튼 하나</span><div class="row"><span class="btn pop">신청하기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></span></div></div>
+    <div class="p on"><span class="tag">버튼 하나</span><div class="row"><span class="btn pop">신청하기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></span></div></div>
+    <div class="p"><span class="tag">버튼과 링크</span><div class="row two"><span class="btn pop">신청하기</span><span class="lnk">일정 보기</span></div></div>
+    <div class="p on"><span class="tag">버튼과 링크</span><div class="row two"><span class="btn pop">신청하기</span><span class="lnk">일정 보기</span></div></div>
+  </div>
+</div>
+</body></html>

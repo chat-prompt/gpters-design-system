@@ -13,14 +13,14 @@
 .gs--tint{background:#FEF2EC}
 .gs--scene{background:#FDF4B1}
 
-.gs-label{position:absolute;display:inline-flex;align-items:center;font-family:'SUIT';font-weight:700;line-height:1;letter-spacing:-0.02em;border-radius:999px;background:#151413;color:#fff;white-space:nowrap}
+.gs-label{position:absolute;display:inline-flex;align-items:center;font-family:'SUIT';font-weight:800;line-height:1;letter-spacing:-0.02em;border-radius:999px;background:#151413;color:#fff;white-space:nowrap}
 .gs--dark .gs-label{background:#fff;color:#151413}
 .gs--orange .gs-label{background:#151413}
-.gs-head{position:absolute;font-family:'Paperlogy';font-weight:900;line-height:1.12;letter-spacing:-0.02em;white-space:nowrap}
+.gs-head{position:absolute;font-family:'Paperlogy';font-weight:700;line-height:1.12;letter-spacing:-0.02em;white-space:nowrap}
 .gs-accent{color:#EB5A10}
 .gs--dark .gs-accent{color:#FF7A1A}
 .gs--orange .gs-accent{color:#FFE14D}
-.gs-sub{position:absolute;font-family:'SUIT';font-weight:500;line-height:1.3;letter-spacing:-0.02em;white-space:nowrap}
+.gs-sub{position:absolute;font-family:'SUIT';font-weight:400;line-height:1.3;letter-spacing:-0.02em;white-space:nowrap}
 .gs-num{position:absolute;font-family:'Clash Grotesk','Paperlogy',sans-serif;font-weight:500;line-height:1;letter-spacing:-0.03em;white-space:nowrap}
 
 /* 글자 묶음(스택): 라벨 → 헤드 → 서브 → CTA를 한 틀에 세로로 쌓는다. 왼쪽 선 하나, 간격은 헤드 크기(--hs) 비율.
@@ -37,12 +37,12 @@
 .gs-stack>.gs-num{margin-left:-0.06em}
 /* CTA: 글자가 굵게 18.7px 이상이면 #EB5A10, 그보다 작으면 흰 글자 대비 4.5를 맞추려고 #D34600.
    주황 바탕 위에서는 먹색 버튼 */
-.gs-cta{position:absolute;display:inline-flex;align-items:center;justify-content:center;gap:.35em;font-family:'SUIT';font-weight:700;line-height:1;letter-spacing:-0.02em;color:#fff;background:#EB5A10;border-radius:8px;box-shadow:0 .1em 0 #B83D00;white-space:nowrap}
+.gs-cta{position:absolute;display:inline-flex;align-items:center;justify-content:center;gap:.35em;font-family:'SUIT';font-weight:800;line-height:1;letter-spacing:-0.02em;color:#fff;background:#EB5A10;border-radius:8px;box-shadow:0 .1em 0 #B83D00;white-space:nowrap}
 .gs-cta--small{background:#D34600;box-shadow:0 2px 0 #A83600}
 .gs-cta--ink{background:#fff;color:#D34600;box-shadow:0 .1em 0 #9E3300}
 .gs-cta--pill{border-radius:999px}
 /* 하단 주황 띠 CTA (판매 카드뉴스 방식) */
-.gs-strip{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:.3em;background:#EB5A10;color:#fff;font-family:'Paperlogy';font-weight:900;letter-spacing:-0.02em}
+.gs-strip{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:.3em;background:#EB5A10;color:#fff;font-family:'Paperlogy';font-weight:700;letter-spacing:-0.02em}
 /* 로고: 넣기로 한 지면에서만. 불투명도 55%로 배경에 녹임 */
 .gs-logo{position:absolute;display:block;opacity:.55;height:auto}
 .gs-tile{position:absolute;background:#EB5A10;display:flex;align-items:center;justify-content:center}
@@ -54,7 +54,7 @@
 .gs-ui .b{left:8%;top:9%;width:28%;height:8%;border-radius:999px;background:#EB5A10}
 .gs-ui .l{left:8%;height:5.5%;border-radius:999px;background:#E6E1DB}
 .gs-ui .l1{top:29%;width:70%}.gs-ui .l2{top:41%;width:84%}.gs-ui .l3{top:53%;width:56%}
-.gs-ui .k{right:8%;bottom:8%;width:22%;aspect-ratio:1;border-radius:50%;background:#EB5A10;color:#fff;font-style:normal;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:var(--k,28px)}
+.gs-ui .k{right:8%;bottom:8%;width:22%;aspect-ratio:1;border-radius:50%;background:#EB5A10;color:#fff;font-style:normal;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:var(--k,28px)}
 .gs-ui--tint{background:#FEF2EC}
 .gs-ui--tint .l{background:#F6D9CB}
 .gs-glow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,225,77,.55) 0,rgba(255,225,77,0) 68%)}
@@ -62,7 +62,7 @@
 /* 그림 가장자리를 배경색으로 녹이는 페이드(캐릭터 장면용) */
 .fade-tb{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 82%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 82%,transparent 100%)}
 /* 안전 영역 표시(9:16) */
-.gs-safe{position:absolute;left:0;right:0;background:repeating-linear-gradient(135deg,rgba(21,20,19,.16) 0 14px,rgba(21,20,19,.06) 14px 28px);color:#fff;font:700 28px/1 'SUIT';display:flex;align-items:center;justify-content:center;pointer-events:none;letter-spacing:-0.01em}
+.gs-safe{position:absolute;left:0;right:0;background:repeating-linear-gradient(135deg,rgba(21,20,19,.16) 0 14px,rgba(21,20,19,.06) 14px 28px);color:#fff;font:800 28px/1 'SUIT';display:flex;align-items:center;justify-content:center;pointer-events:none;letter-spacing:-0.01em}
 .gs-safe span{background:rgba(21,20,19,.78);padding:10px 20px;border-radius:999px}
 
 /* 페이지 쪽: 카드·무대·스펙 */
@@ -72,11 +72,11 @@
 .slot-stage{background:linear-gradient(#EEE9E3 1px,transparent 1px) 0 0/24px 24px,linear-gradient(90deg,#EEE9E3 1px,transparent 1px) 0 0/24px 24px,#FBFAF8;border:1px solid #ECECEC;border-radius:12px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:14px}
 .gs-fit{position:relative;flex:none;box-shadow:0 10px 30px rgba(0,0,0,.10),0 0 0 1px rgba(21,20,19,.08)}
 .gs-fit .gs{position:absolute;left:0;top:0}
-.slot-ext{display:flex;align-items:center;gap:10px;font-size:13px;color:#6B6B6B}
-.slot-ext i{font-style:normal;display:inline-block;background:#EB5A10;color:#fff;font-weight:700;font-size:15px;padding:11px 20px;border-radius:8px}
+.slot-ext{display:flex;align-items:center;gap:10px;font-size:13px;color:#5A5A5A}
+.slot-ext i{font-style:normal;display:inline-block;background:#EB5A10;color:#fff;font-weight:800;font-size:15px;padding:11px 20px;border-radius:8px}
 .slot-spec{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
 .slot-spec div{font-size:13.5px;line-height:1.55;color:#3a3a3a}
-.slot-spec dt{font-size:11px;font-weight:700;letter-spacing:.06em;color:#6B6B6B;margin-bottom:3px}
+.slot-spec dt{font-size:11px;font-weight:800;letter-spacing:.06em;color:#5A5A5A;margin-bottom:3px}
 .slot-spec dd{margin:0}
 @media (max-width:1100px){.slot-spec{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.slot-spec{grid-template-columns:minmax(0,1fr)}}

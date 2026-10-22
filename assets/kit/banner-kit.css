@@ -1,7 +1,7 @@
 /* GPTers 배너 부품(컴포넌트) v2 — 2026-10-19
    모든 크기는 배너 가로 --W 기준 비율(폰은 가로폭에 맞춰 줄이므로 가로 비율이 실제 보이는 크기를 정한다).
    사용: <div class="gb" style="--W:1080px;--H:650px"> ... </div>
-   굵기: 300·500·700만(900은 필요할 때만). 페이퍼로지 제목 700, SUIT는 한 단계 올려 쓴다.
+   굵기(10/22): 페이퍼로지 700·500·300, SUIT 800·600·400, 900 안 씀. 라벨·버튼 SUIT 800, 주황 바탕 서브 600, 서브 400.
    간격은 실제 글자(잉크) 기준 두 가지만: 좁게 = 헤드 크기의 0.3배(라벨-헤드, 헤드-서브), 넓게 = 0.5배(헤드·서브-버튼).
    아래 margin 값은 상자 여백이라 잉크 간격이 그렇게 보이도록 10/19 실측으로 역산한 값이다. 근소한 차이는 만들지 않는다. */
 .gb{--head:calc(var(--W)*0.105);--label:calc(var(--W)*0.033);--small:calc(var(--W)*0.046);--btn:calc(var(--W)*0.04);--pad:calc(var(--W)*0.06);
@@ -16,8 +16,8 @@
 .gb-text--top-center{left:50%;transform:translateX(-50%);top:var(--pad);max-width:calc(var(--W)*0.88);text-align:center}
 .gb-text--bottom-center{left:50%;transform:translateX(-50%);top:auto;bottom:var(--pad);max-width:calc(var(--W)*0.88);text-align:center}
 
-/* 라벨: 알약, SUIT 700, 3.3%W(하한). 크기 대신 모양으로 구분. 라이브는 .live(빨간 점) */
-.gb-label{display:inline-flex;align-items:center;gap:.45em;font-family:'SUIT';font-weight:700;font-size:var(--label);line-height:1.2;letter-spacing:-0.01em;padding:.32em .8em;border-radius:999px;background:#1A1A1A;color:#fff}
+/* 라벨: 알약, SUIT 800, 3.3%W(하한). 크기 대신 모양으로 구분. 라이브는 .live(빨간 점) */
+.gb-label{display:inline-flex;align-items:center;gap:.45em;font-family:'SUIT';font-weight:800;font-size:var(--label);line-height:1.2;letter-spacing:-0.01em;padding:.32em .8em;border-radius:999px;background:#1A1A1A;color:#fff}
 .gb--dark .gb-label,.gb--orange .gb-label{background:#fff;color:#D34600}
 .gb-label.live::before{content:"";width:.55em;height:.55em;border-radius:50%;background:#FF3B30;box-shadow:0 0 0 .18em rgba(255,59,48,.25)} /* --gp-live */
 .gb--dark .gb-label{background:#fff;color:#1A1A1A}
@@ -30,16 +30,16 @@
 .gb-head .gb-light{font-weight:500}            /* 한 제목 안에서 덜 강조할 줄 */
 .gb-accent{color:#EB5A10}
 .gb--dark .gb-accent{color:#EB5A10}
-/* 서브카피: SUIT 500(눈으로는 페이퍼로지 300 두께), 라벨과 같은 3.7%W. 헤드와 좁은 간격 */
-.gb-sub{font-family:'SUIT';font-weight:500;font-size:var(--small);line-height:1.35;letter-spacing:-0.01em;margin-top:calc(var(--head)*0.08)}
+/* 서브카피: SUIT 400(주황 바탕은 600), 라벨과 같은 3.7%W. 헤드와 좁은 간격 */
+.gb-sub{font-family:'SUIT';font-weight:400;font-size:var(--small);line-height:1.35;letter-spacing:-0.01em;margin-top:calc(var(--head)*0.08)}
 .gb-sub{color:#5E4E49}
 .gb--dark .gb-sub{color:rgba(255,255,255,.86)}
-.gb--orange .gb-sub{color:#fff;font-weight:700}
+.gb--orange .gb-sub{color:#fff;font-weight:600}
 
 /* 버튼: 배너(이미지)에는 버튼 하나만. 이미지라 눌리는 곳이 하나뿐이니 보조 링크(.gb-link)는 넣지 않는다(랜딩·웹 화면에서만).
    한 장에 주 버튼 하나. 흰 바탕은 주황 면, 주황·어두운 바탕은 흰 면 + 주황 글자. 헤드와 넓은 간격.
    돌출 그림자는 바탕색을 진하게 한 색으로 1px씩 쌓는다(모서리 틈 방지). 보조는 .gb-link(밑줄 링크) */
-.gb-cta{display:inline-flex;align-items:center;gap:.35em;margin-top:calc(var(--head)*0.37);font-family:'SUIT';font-weight:700;font-size:var(--btn);line-height:1;letter-spacing:-0.02em;
+.gb-cta{display:inline-flex;align-items:center;gap:.35em;margin-top:calc(var(--head)*0.37);font-family:'SUIT';font-weight:800;font-size:var(--btn);line-height:1;letter-spacing:-0.02em;
   padding:.6em .95em;border-radius:.35em;background:#EB5A10;color:#fff;
   box-shadow:1px 1px 0 #B83D00,2px 2px 0 #B83D00,3px 3px 0 #B83D00,4px 4px 0 #B83D00,5px 5px 0 #B83D00,6px 6px 0 #B83D00,7px 7px 0 #B83D00,8px 8px 0 #B83D00}
 .gb--orange .gb-cta{background:#fff;color:#D34600;box-shadow:1px 1px 0 #9E3300,2px 2px 0 #9E3300,3px 3px 0 #9E3300,4px 4px 0 #9E3300,5px 5px 0 #9E3300,6px 6px 0 #9E3300,7px 7px 0 #9E3300,8px 8px 0 #9E3300}
@@ -48,7 +48,7 @@
 .gb-actions{display:flex;align-items:center;gap:.8em;margin-top:calc(var(--head)*0.37);white-space:nowrap;font-size:var(--small)}
 .gb-actions .gb-cta{margin-top:0}
 .gb-actions .gb-link{margin:0}
-.gb-link{display:inline-block;margin:calc(var(--head)*0.37) 0 0 .8em;font-family:'SUIT';font-weight:700;font-size:var(--small);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em;color:inherit}
+.gb-link{display:inline-block;margin:calc(var(--head)*0.37) 0 0 .8em;font-family:'SUIT';font-weight:800;font-size:var(--small);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em;color:inherit}
 .gb--orange{background:#EB5A10;color:#fff}
 
 /* 외곽선: 요청 시에만 */
